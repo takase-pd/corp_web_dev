@@ -14,7 +14,7 @@ jobs:
 
       # Install Flutter with clone
       - name: Install Flutter
-        run: git clone https://github.com/flutter/flutter.git
+        run: git clone https://github.com/flutter/flutter.git -b stable
 
       # PATH
       - name: Add path
