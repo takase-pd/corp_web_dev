@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.flutterflow.pdcorpweb">
+    package="com.particledrawing.pdcorpweb">
    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="p_d_corp_web"
+        android:label="pd_corp_web"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true">
 
