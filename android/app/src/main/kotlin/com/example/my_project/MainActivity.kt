@@ -1,4 +1,4 @@
-package com.particledrawing.corp_web_dev
+package com.flutterflow.pdcorpweb
 
 import io.flutter.embedding.android.FlutterActivity
 

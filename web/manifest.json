@@ -1,6 +1,6 @@
 {
-    "name": "corp_web_dev",
-    "short_name": "corp_web_dev",
+    "name": "p_d_corp_web",
+    "short_name": "p_d_corp_web",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
