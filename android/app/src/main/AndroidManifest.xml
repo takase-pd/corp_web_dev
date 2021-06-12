@@ -1,8 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.particledrawing.corp_web_dev">
+    package="com.particledrawing.pdcorpweb">
+   <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="corp_web_dev"
-        android:icon="@mipmap/ic_launcher">
+        android:label="pd_corp_web"
+        android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true">
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
