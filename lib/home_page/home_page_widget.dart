@@ -74,7 +74,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   Align(
                     alignment: Alignment(0, 0),
                     child: Text(
-                      'Create a culture that celebrates\\n\\nthe repetition of creation, experimentation and failure.',
+                      'Create a culture that celebrates the repetition of creation, experimentation and failure.',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.title1.override(
                         fontFamily: 'Poppins',
