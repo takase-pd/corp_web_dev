@@ -114,7 +114,25 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                 child: Text(
-                  '〒261-0013\\n千葉県千葉市美浜区打瀬1-11-1\\n1-11-1 Utase, Mihama-ku, Chiba-shi, Chiba',
+                  '〒261-0013',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '千葉県千葉市美浜区打瀬1-11-1',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '1-11-1 Utase, Mihama-ku, Chiba-shi, Chiba',
                   style: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Poppins',
                   ),
@@ -186,7 +204,34 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                 child: Text(
-                  '大学院修士までグリッド(Grid Computing)をベースにしたシステム構築を研究。\\n\\nCAE企業でエンジニアを経験後、営業部門へ異動し多目的最適化支援ツールの新規顧客向け提案を担当。\\n\\nマーケティングリサーチのスタートアップ企業に移り、インターネット行動分析事業立ち上げに携わる。航空、流通、金融、食品飲料、不動産、シンクタンク等の各業界のリーディングカンパニーのリサーチ・アナリティクス、デジタルマーケティングを支援。当事業の売り上げゼロから2桁億円超まで、トップコンサルタントとして牽引。\\n\\n20年間にわたり携わるデジタル分野の経験を土台に、デザインやアートの考え方を用いて事業成長を支援するParticle Drawingを創業、現職。',
+                  '大学院修士までグリッド(Grid Computing)をベースにしたシステム構築を研究。',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  'CAE企業でエンジニアを経験後、営業部門へ異動し多目的最適化支援ツールの新規顧客向け提案を担当。',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  'マーケティングリサーチのスタートアップ企業に移り、インターネット行動分析事業立ち上げに携わる。航空、流通、金融、食品飲料、不動産、シンクタンク等の各業界のリーディングカンパニーのリサーチ・アナリティクス、デジタルマーケティングを支援。当事業の売り上げゼロから2桁億円超まで、トップコンサルタントとして牽引。',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '20年間にわたり携わるデジタル分野の経験を土台に、デザインやアートの考え方を用いて事業成長を支援するParticle Drawingを創業、現職。',
                   style: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Poppins',
                   ),
