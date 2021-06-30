@@ -1,17 +1,17 @@
-import '../about_page/about_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../home_page/home_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePageWidget extends StatefulWidget {
-  HomePageWidget({Key key}) : super(key: key);
+class AboutPageWidget extends StatefulWidget {
+  AboutPageWidget({Key key}) : super(key: key);
 
   @override
-  _HomePageWidgetState createState() => _HomePageWidgetState();
+  _AboutPageWidgetState createState() => _AboutPageWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
+class _AboutPageWidgetState extends State<AboutPageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -66,236 +66,28 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 alignment: Alignment(0, 0),
                 children: [
                   Image.network(
-                    'https://picsum.photos/id/621/2300/1533',
+                    'https://picsum.photos/id/625/2507/1674',
                     width: double.infinity,
                     height: 600,
                     fit: BoxFit.cover,
-                  ),
-                  Align(
-                    alignment: Alignment(0, 0),
-                    child: Text(
-                      'Create a culture that celebrates\\n\\nthe repetition of creation, experimentation and failure.',
-                      textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.title1.override(
-                        fontFamily: 'Poppins',
-                        color: Colors.white,
-                        fontSize: 32,
-                      ),
-                    ),
                   )
                 ],
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
-                child: Text(
-                  'デザインを武器にビジネスの支援や社会課題の解決の手助けをしたいという思いを持った組織です。デザインとは、観察し、問いかけ、試し、気づきを得ることを繰り返す行為です。',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
-                child: Text(
-                  '私たちは、ビジネスが営まれている現場、現物、現人を、ビジネスの主体者と顧客それぞれの目線から観察し、見落とされている小さな違和感を発見します。その違和感から生じていることは何か、改善すると何が起きるだろうか問いかけながら、今目の前でできることを着手します。それによる変化を観察し、新たな気づきを得て、再びできることに着手し、繰り返し続けます。',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
-                child: Text(
-                  'Fail Fast, Fail Often',
-                  style: FlutterFlowTheme.title1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: Text(
-                  '新しいサービスを作る、既存事業を改善するなど、あらゆる状況や場面で最も大事なのは、素早く試して、失敗を積み重ね、次につなげることであると考えています。',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: Text(
-                  '試すことに必要なのは、今の状況を観察することです。現場、現物、現人に含まれる要素を細かく細かく分解していきます。細かく分解された要素1つ1つに、思いがけない気付きが存在します。その気付きの中に、今すぐに試すことができる改善が見つかります。 次のような些細なことでも構いません。',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                child: Text(
-                  'ゴミやホコリを掃除する、不要なものを片付ける',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                child: Text(
-                  '商品画像の構成を変える',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                child: Text(
-                  '来店客に話しかける',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: Text(
-                  'しかしながら、試したことがすべて上手くいくとは限らない、失敗も多々出てくるはずです。失敗は恐れることではなく、次に試すヒントになります。つまり、失敗を重ねることは、真に改善すべきことの発見につながるのです。',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: Text(
-                  '私たちは観察し、試し、失敗から次につなげる方法を手助けします。対象物やそれを扱う組織などによって、その方法は様々です。私たちは皆様と共に考え、特有の方法を見つけ出す支援をいたします。ゆくゆくは、私たちがいなくてもその方法が溶け込み、文化となるよう仕向けていきます。',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
-                child: Text(
-                  'Service',
-                  style: FlutterFlowTheme.title1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: Text(
-                  'ビジネス課題抽出と解決策立案',
-                  style: FlutterFlowTheme.title2.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: Text(
-                  'お客さまの既存ビジネスの課題の抽出と同時に解決策を立案し、実行へ進む支援を行います。課題抽出では、事業に関わる担当者やユーザーと接しながら課題のリストアップ、カテゴライズ、優先度付けの整理します。並行して解決策をいくつも出し、試しに実行できることを担当者とともに取り組みます。',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                child: Text(
-                  'ユーザーリサーチ | 社員リサーチ | 現場リサーチ',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                child: Text(
-                  '課題・改善策リスト制作、運用支援',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                child: Text(
-                  'プロトタイピング | トライアンドエラー',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: Text(
-                  'ブランド戦略立案',
-                  style: FlutterFlowTheme.title2.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: Text(
-                  'お客さまのブランドを再認識いただきビジネスを成長させるために、お客さまの強みや美意識などを抽出、整理します。日々の業務で忘れがちな強み、美意識を改めて見つめ、ユーザーに届ける方法を考え出します。',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: Text(
-                  'データ可視化・分析',
-                  style: FlutterFlowTheme.title2.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: Text(
-                  'お客さまの持つ様々なデータの可視化と分析を繰り返し、感覚的に理解していた傾向を数値として理解できるようにします。また、データだけに囚われない、お客さまの本当に進みたい方向を問いかけ、進む道を見つけ出す支援を行います。',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                child: Text(
-                  'Google Analytics',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                child: Text(
-                  'Google DataPortal',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                child: Text(
-                  'その他、データ抽出や可視化方法の相談を承ります。',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
                 child: Text(
                   'About',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.title1.override(
+                    fontFamily: 'Poppins',
+                    fontSize: 42,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                child: Text(
+                  '会社名',
                   style: FlutterFlowTheme.title1.override(
                     fontFamily: 'Poppins',
                   ),
@@ -304,26 +96,250 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                 child: Text(
-                  '大手航空会社、流通小売トップ企業、財閥系金融グループ、財閥系不動産会社、大手食品・飲料メーカーなどで デジタルマーケティング、ビッグデータ分析、マーケティング・リサーチなどで事業を支援してきました。 顧客企業のビジネスを深く理解し、どんな未来をつくりたいか一緒に考え、デザインシンキングを取り入れました。 この経験を活かし、企業組織にデザインドリブン文化を根付かせる支援を行います。',
+                  'Particle Drawing合同会社（Particle Drawing G.K.）',
                   style: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Poppins',
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
                 child: Text(
-                  '高瀬 裕治',
-                  textAlign: TextAlign.end,
+                  '所在地',
+                  style: FlutterFlowTheme.title1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '〒261-0013',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '千葉県千葉市美浜区打瀬1-11-1',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '1-11-1 Utase, Mihama-ku, Chiba-shi, Chiba',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                child: Text(
+                  '設立',
+                  style: FlutterFlowTheme.title1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '2019年8月',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                child: Text(
+                  '資本金',
+                  style: FlutterFlowTheme.title1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '300,000円',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                child: Text(
+                  '代表者名',
+                  style: FlutterFlowTheme.title1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '高瀬 裕治 Yuji Takase',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                child: Text(
+                  '略歴',
+                  style: FlutterFlowTheme.title2.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '大学院修士までグリッド(Grid Computing)をベースにしたシステム構築を研究。',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  'CAE企業でエンジニアを経験後、営業部門へ異動し多目的最適化支援ツールの新規顧客向け提案を担当。',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  'マーケティングリサーチのスタートアップ企業に移り、インターネット行動分析事業立ち上げに携わる。航空、流通、金融、食品飲料、不動産、シンクタンク等の各業界のリーディングカンパニーのリサーチ・アナリティクス、デジタルマーケティングを支援。当事業の売り上げゼロから2桁億円超まで、トップコンサルタントとして牽引。',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '20年間にわたり携わるデジタル分野の経験を土台に、デザインやアートの考え方を用いて事業成長を支援するParticle Drawingを創業、現職。',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                child: Text(
+                  'DLX Design Academy',
                   style: FlutterFlowTheme.title3.override(
                     fontFamily: 'Poppins',
                   ),
                 ),
               ),
               Padding(
+                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                child: Text(
+                  'イノベーション・スキルセット - BTC人材へのファーストス テップ 修了',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                child: Text(
+                  'Drawing to [...] - a guide to thinking through drawing 修了',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                child: Text(
+                  'Designing the Wow! 修了',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                child: Text(
+                  'CIRCULAR ECONOMY – The Future of Business 修了',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
                 padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
                 child: Text(
-                  '社名由来：Particle Drawing',
+                  'Favorite Tools',
+                  style: FlutterFlowTheme.title3.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                child: Text(
+                  'Notion',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                child: Text(
+                  'Figma',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                child: Text(
+                  'Miro',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                child: Text(
+                  'Flutter / FlutterFlow',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                child: Text(
+                  'VScode',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                child: Text(
+                  'パーパス',
                   style: FlutterFlowTheme.title1.override(
                     fontFamily: 'Poppins',
                   ),
@@ -332,23 +348,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                 child: Text(
-                  '組織、プロジェクトなど関わる人それぞれを、異なる性質（思い、主観、美意識など）を持つ粒子【particle】と捉え、 その粒子が集まって同じものはない未来の絵（設計図、アートなど）を描く【drawing】関係性を作り上げたい。 また、プロジェクト対象物を粒子のように細かく分解し、それが持つ性質に気づき・発見し、 対象物が示す新たな側面を描き出す手助けをする。',
+                  'デザインドリブンの文化作りを支援',
                   style: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Poppins',
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                child: Text(
-                  'パーパス：デザインドリブンの文化作りを支援',
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Poppins',
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                 child: Text(
                   'デザインドリブン：創造・実験・失敗の繰り返しを称賛する',
                   style: FlutterFlowTheme.bodyText1.override(
@@ -357,9 +364,54 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
                 child: Text(
-                  '事業領域：ビジネスデザイン',
+                  '事業内容',
+                  style: FlutterFlowTheme.title1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  'ビジネスデザイン、ブランドデザイン、DXデザイン、サービスデザイン、組織デザイン',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                child: Text(
+                  '取引金融機関',
+                  style: FlutterFlowTheme.title1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  '住信SBIネット銀行、ジャパンネット銀行',
+                  style: FlutterFlowTheme.bodyText1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
+                child: Text(
+                  '問い合わせ',
+                  style: FlutterFlowTheme.title1.override(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                child: Text(
+                  'info [ at ] particledrawing.com',
                   style: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Poppins',
                   ),
