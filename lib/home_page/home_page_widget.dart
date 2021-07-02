@@ -467,7 +467,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         color: Color(0xFF565656),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(30, 30, 30, 20),
+                        padding: EdgeInsets.fromLTRB(30, 30, 20, 20),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
