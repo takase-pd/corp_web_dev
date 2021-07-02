@@ -119,6 +119,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                               'About',
                               style: FlutterFlowTheme.subtitle2.override(
                                 fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
@@ -577,6 +578,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                                                 .override(
                                               fontFamily: 'Poppins',
                                               color: Colors.white,
+                                              fontWeight: FontWeight.w500,
                                             ),
                                           ),
                                         ),
