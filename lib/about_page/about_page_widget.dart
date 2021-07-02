@@ -1,8 +1,8 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
+import '../privacy_policy_page/privacy_policy_page_widget.dart';
 import '../products_page/products_page_widget.dart';
-import '../products_page_copy/products_page_copy_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -622,7 +622,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    ProductsPageCopyWidget(),
+                                                    PrivacyPolicyPageWidget(),
                                               ),
                                             );
                                           },

@@ -6,14 +6,15 @@ import '../products_page/products_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ProductsPageCopyWidget extends StatefulWidget {
-  ProductsPageCopyWidget({Key key}) : super(key: key);
+class PrivacyPolicyPageWidget extends StatefulWidget {
+  PrivacyPolicyPageWidget({Key key}) : super(key: key);
 
   @override
-  _ProductsPageCopyWidgetState createState() => _ProductsPageCopyWidgetState();
+  _PrivacyPolicyPageWidgetState createState() =>
+      _PrivacyPolicyPageWidgetState();
 }
 
-class _ProductsPageCopyWidgetState extends State<ProductsPageCopyWidget> {
+class _PrivacyPolicyPageWidgetState extends State<PrivacyPolicyPageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -443,7 +444,7 @@ class _ProductsPageCopyWidgetState extends State<ProductsPageCopyWidget> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    ProductsPageCopyWidget(),
+                                                    PrivacyPolicyPageWidget(),
                                               ),
                                             );
                                           },
