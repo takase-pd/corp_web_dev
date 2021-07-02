@@ -2,7 +2,8 @@ import '../about_page/about_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
-import '../privacy_policy_page/privacy_policy_page_widget.dart';
+import '../privacy_policy_pa/privacy_policy_pa_widget.dart';
+import '../products_page_copy/products_page_copy_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -193,7 +194,7 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
                         color: Color(0xFF565656),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(30, 50, 30, 30),
+                        padding: EdgeInsets.fromLTRB(30, 30, 20, 20),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -298,7 +299,7 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    PrivacyPolicyPageWidget(),
+                                                    PrivacyPolicyPaWidget(),
                                               ),
                                             );
                                           },

@@ -1,8 +1,9 @@
 import '../about_page/about_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../privacy_policy_page/privacy_policy_page_widget.dart';
+import '../privacy_policy_pa/privacy_policy_pa_widget.dart';
 import '../products_page/products_page_widget.dart';
+import '../products_page_copy/products_page_copy_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -220,7 +221,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             'ゴミやホコリを掃除する、不要なものを片付ける',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -229,7 +230,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             '商品画像の構成を変える',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -238,7 +239,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             '来店客に話しかける',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -292,7 +293,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             'ユーザーリサーチ | 社員リサーチ | 現場リサーチ',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -301,7 +302,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             '課題・改善策リスト制作、運用支援',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -310,7 +311,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             'プロトタイピング | トライアンドエラー',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -355,7 +356,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             'Google Analytics',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -364,7 +365,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             'Google DataPortal',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -373,7 +374,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             'その他、データ抽出や可視化方法の相談を承ります。',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -428,7 +429,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             'パーパス：デザインドリブンの文化作りを支援',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -437,7 +438,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             'デザインドリブン：創造・実験・失敗の繰り返しを称賛する',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -446,7 +447,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Text(
                             '事業領域：ビジネスデザイン',
                             style: FlutterFlowTheme.bodyText1.override(
@@ -466,7 +467,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         color: Color(0xFF565656),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(30, 50, 30, 30),
+                        padding: EdgeInsets.fromLTRB(30, 30, 20, 20),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -571,7 +572,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    PrivacyPolicyPageWidget(),
+                                                    PrivacyPolicyPaWidget(),
                                               ),
                                             );
                                           },
