@@ -137,6 +137,7 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
                               'Products',
                               style: FlutterFlowTheme.subtitle2.override(
                                 fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
@@ -275,6 +276,7 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
                                                 .override(
                                               fontFamily: 'Poppins',
                                               color: Colors.white,
+                                              fontWeight: FontWeight.w500,
                                             ),
                                           ),
                                         ),

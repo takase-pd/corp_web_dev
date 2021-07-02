@@ -99,6 +99,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               'Home',
                               style: FlutterFlowTheme.subtitle2.override(
                                 fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
@@ -502,6 +503,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .override(
                                               fontFamily: 'Poppins',
                                               color: Colors.white,
+                                              fontWeight: FontWeight.w500,
                                             ),
                                           ),
                                         ),
