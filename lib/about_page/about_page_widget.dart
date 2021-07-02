@@ -2,6 +2,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
 import '../products_page/products_page_widget.dart';
+import '../products_page_copy/products_page_copy_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -526,82 +527,119 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                             children: [
                               Row(
                                 mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.fromLTRB(0, 0, 0, 20),
-                                        child: InkWell(
-                                          onTap: () async {
-                                            await Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    HomePageWidget(),
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(0, 0, 50, 0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsets.fromLTRB(0, 0, 0, 20),
+                                          child: InkWell(
+                                            onTap: () async {
+                                              await Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      HomePageWidget(),
+                                                ),
+                                              );
+                                            },
+                                            child: Text(
+                                              'Home',
+                                              style: FlutterFlowTheme.bodyText1
+                                                  .override(
+                                                fontFamily: 'Poppins',
+                                                color: Colors.white,
                                               ),
-                                            );
-                                          },
-                                          child: Text(
-                                            'Home',
-                                            style: FlutterFlowTheme.bodyText1
-                                                .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
                                             ),
                                           ),
                                         ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.fromLTRB(0, 0, 0, 20),
-                                        child: InkWell(
-                                          onTap: () async {
-                                            await Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    AboutPageWidget(),
+                                        Padding(
+                                          padding:
+                                              EdgeInsets.fromLTRB(0, 0, 0, 20),
+                                          child: InkWell(
+                                            onTap: () async {
+                                              await Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      AboutPageWidget(),
+                                                ),
+                                              );
+                                            },
+                                            child: Text(
+                                              'About',
+                                              style: FlutterFlowTheme.bodyText1
+                                                  .override(
+                                                fontFamily: 'Poppins',
+                                                color: Colors.white,
                                               ),
-                                            );
-                                          },
-                                          child: Text(
-                                            'About',
-                                            style: FlutterFlowTheme.bodyText1
-                                                .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
                                             ),
                                           ),
                                         ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.fromLTRB(0, 0, 0, 20),
-                                        child: InkWell(
-                                          onTap: () async {
-                                            await Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ProductsPageWidget(),
+                                        Padding(
+                                          padding:
+                                              EdgeInsets.fromLTRB(0, 0, 0, 20),
+                                          child: InkWell(
+                                            onTap: () async {
+                                              await Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      ProductsPageWidget(),
+                                                ),
+                                              );
+                                            },
+                                            child: Text(
+                                              'Products',
+                                              style: FlutterFlowTheme.bodyText1
+                                                  .override(
+                                                fontFamily: 'Poppins',
+                                                color: Colors.white,
                                               ),
-                                            );
-                                          },
-                                          child: Text(
-                                            'Products',
-                                            style: FlutterFlowTheme.bodyText1
-                                                .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
                                             ),
                                           ),
-                                        ),
-                                      )
-                                    ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(0, 0, 50, 0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsets.fromLTRB(0, 0, 0, 20),
+                                          child: InkWell(
+                                            onTap: () async {
+                                              await Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      ProductsPageCopyWidget(),
+                                                ),
+                                              );
+                                            },
+                                            child: Text(
+                                              'Privacy Policy',
+                                              style: FlutterFlowTheme.bodyText1
+                                                  .override(
+                                                fontFamily: 'Poppins',
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   )
                                 ],
                               ),

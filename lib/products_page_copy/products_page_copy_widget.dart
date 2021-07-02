@@ -1,19 +1,19 @@
 import '../about_page/about_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../home_page/home_page_widget.dart';
 import '../products_page/products_page_widget.dart';
-import '../products_page_copy/products_page_copy_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePageWidget extends StatefulWidget {
-  HomePageWidget({Key key}) : super(key: key);
+class ProductsPageCopyWidget extends StatefulWidget {
+  ProductsPageCopyWidget({Key key}) : super(key: key);
 
   @override
-  _HomePageWidgetState createState() => _HomePageWidgetState();
+  _ProductsPageCopyWidgetState createState() => _ProductsPageCopyWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
+class _ProductsPageCopyWidgetState extends State<ProductsPageCopyWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -150,22 +150,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       alignment: Alignment(0, 0),
                       children: [
                         Image.network(
-                          'https://picsum.photos/id/621/2300/1533',
+                          'https://picsum.photos/id/625/2507/1674',
                           width: double.infinity,
-                          height: 600,
+                          height: 500,
                           fit: BoxFit.cover,
-                        ),
-                        Align(
-                          alignment: Alignment(0, 0),
-                          child: Text(
-                            'Create a culture that celebrates the repetition of creation, experimentation and failure.',
-                            textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.title1.override(
-                              fontFamily: 'Poppins',
-                              color: Colors.white,
-                              fontSize: 32,
-                            ),
-                          ),
                         )
                       ],
                     ),
@@ -173,76 +161,23 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Text(
-                              'デザインを武器にビジネスの支援や社会課題の解決の手助けをしたいという思いを持った組織です。デザインとは、観察し、問いかけ、試し、気づきを得ることを繰り返す行為です。',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                            child: Text(
-                              '私たちは、ビジネスが営まれている現場、現物、現人を、ビジネスの主体者と顧客それぞれの目線から観察し、見落とされている小さな違和感を発見します。その違和感から生じていることは何か、改善すると何が起きるだろうか問いかけながら、今目の前でできることを着手します。それによる変化を観察し、新たな気づきを得て、再びできることに着手し、繰り返し続けます。',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                            child: Text(
-                              'Fail Fast, Fail Often',
+                              '個人情報保護方針',
+                              textAlign: TextAlign.center,
                               style: FlutterFlowTheme.title1.override(
                                 fontFamily: 'Poppins',
+                                fontSize: 36,
                               ),
                             ),
                           ),
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Text(
-                              '新しいサービスを作る、既存事業を改善するなど、あらゆる状況や場面で最も大事なのは、素早く試して、失敗を積み重ね、次につなげることであると考えています。',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                            child: Text(
-                              '試すことに必要なのは、今の状況を観察することです。現場、現物、現人に含まれる要素を細かく細かく分解していきます。細かく分解された要素1つ1つに、思いがけない気付きが存在します。その気付きの中に、今すぐに試すことができる改善が見つかります。 次のような些細なことでも構いません。',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              'ゴミやホコリを掃除する、不要なものを片付ける',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              '商品画像の構成を変える',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              '来店客に話しかける',
+                              'Particle Drawing合同会社（以下、「当社」といいます。）は、下記の個人情報保護方針に則り、当社ウェブサイト閲覧者、お客様、取引関係者等（以下「ご本人」といいます。）の個人情報（以下「個人情報」といいます。）を安全かつ適切に取り扱います。',
                               style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
@@ -251,7 +186,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Text(
-                              'しかしながら、試したことがすべて上手くいくとは限らない、失敗も多々出てくるはずです。失敗は恐れることではなく、次に試すヒントになります。つまり、失敗を重ねることは、真に改善すべきことの発見につながるのです。',
+                              '1. 当個人情報保護方針は、当社がご本人から取得した個人情報について適用されます。',
                               style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
@@ -260,61 +195,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Text(
-                              '私たちは観察し、試し、失敗から次につなげる方法を手助けします。対象物やそれを扱う組織などによって、その方法は様々です。私たちは皆様と共に考え、特有の方法を見つけ出す支援をいたします。ゆくゆくは、私たちがいなくてもその方法が溶け込み、文化となるよう仕向けていきます。',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                            child: Text(
-                              'Service',
-                              style: FlutterFlowTheme.title1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                            child: Text(
-                              'ビジネス課題抽出と解決策立案',
-                              style: FlutterFlowTheme.title2.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                            child: Text(
-                              'お客さまの既存ビジネスの課題の抽出と同時に解決策を立案し、実行へ進む支援を行います。課題抽出では、事業に関わる担当者やユーザーと接しながら課題のリストアップ、カテゴライズ、優先度付けの整理します。並行して解決策をいくつも出し、試しに実行できることを担当者とともに取り組みます。',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              'ユーザーリサーチ | 社員リサーチ | 現場リサーチ',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              '課題・改善策リスト制作、運用支援',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              'プロトタイピング | トライアンドエラー',
+                              '2. 当社が取得した個人情報について、不正アクセス、紛失、漏洩等が発生しないよう、個人情報取扱規定を整備し、これらの危険に対する安全対策を積極的に実施します。',
                               style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
@@ -323,16 +204,61 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Text(
-                              'ブランド戦略立案',
-                              style: FlutterFlowTheme.title2.override(
+                              '3. 当社が取得した個人情報は当社にて厳重に管理し、ご本人の同意を得た場合又は法令により例外が認められる場合を除き、取得の際に予め明示した目的又は以下の利用目的の範囲内で利用いたします。',
+                              style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                             child: Text(
-                              'お客さまのブランドを再認識いただきビジネスを成長させるために、お客さまの強みや美意識などを抽出、整理します。日々の業務で忘れがちな強み、美意識を改めて見つめ、ユーザーに届ける方法を考え出します。',
+                              'a. 各種問い合わせ、ご依頼に対する対応',
+                              style: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Poppins',
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            child: Text(
+                              'b.  製品・サービスの企画、研究、開発等',
+                              style: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Poppins',
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            child: Text(
+                              'c. 製品・サービスに関する案内、提供、管理',
+                              style: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Poppins',
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            child: Text(
+                              'd. セミナー、講演、展示会、イベント等の案内、運営、管理',
+                              style: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Poppins',
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            child: Text(
+                              'e. メールニュース配信',
+                              style: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Poppins',
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            child: Text(
+                              'f. 上記各号に関連する全ての業務',
                               style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
@@ -341,8 +267,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Text(
-                              'データ可視化・分析',
-                              style: FlutterFlowTheme.title2.override(
+                              '4. 当社は、当社が取得した個人情報について、法令により例外が認められる場合を除き、ご本人の同意を得ることなく第三者に提供することはございません。',
+                              style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
                             ),
@@ -350,44 +276,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Text(
-                              'お客さまの持つ様々なデータの可視化と分析を繰り返し、感覚的に理解していた傾向を数値として理解できるようにします。また、データだけに囚われない、お客さまの本当に進みたい方向を問いかけ、進む道を見つけ出す支援を行います。',
+                              '5. ご本人が前項に定める開示等を求められる場合、又は自己の個人情報の取扱いについてご指摘いただく場合には、こちら [info[at]particledrawing.com] よりご連絡下さい。',
                               style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              'Google Analytics',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              'Google DataPortal',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              'その他、データ抽出や可視化方法の相談を承ります。',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                            child: Text(
-                              'About',
-                              style: FlutterFlowTheme.title1.override(
                                 fontFamily: 'Poppins',
                               ),
                             ),
@@ -395,62 +285,44 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Text(
-                              '大手航空会社、流通小売トップ企業、財閥系金融グループ、財閥系不動産会社、大手食品・飲料メーカーなどで デジタルマーケティング、ビッグデータ分析、マーケティング・リサーチなどで事業を支援してきました。 顧客企業のビジネスを深く理解し、どんな未来をつくりたいか一緒に考え、デザインシンキングを取り入れました。 この経験を活かし、企業組織にデザインドリブン文化を根付かせる支援を行います。',
+                              '6. 当社が取得した個人情報は、当社施設または当社契約先サービスプロバイダの所在国において保存および処理されることがあります。当社に情報を開示することにより、日本、英国及び米国を含む、ご本人が居住する国以外の国に情報が転送されることに同意したものとみなされます。これらの国は、ご本人が居住する国または情報を最初に提供したときの所在国とは異なるデータ保護規則を有する可能性があります。\\n',
                               style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Text(
-                              '高瀬 裕治',
+                              '7. 当社が取得した個人情報の取扱い及び管理、並びに本個人情報保護方針の効力及び解釈については、日本法を準拠法とします。',
+                              style: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Poppins',
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Text(
+                              '8. 当社が取得した個人情報及び本個人情報保護方針に関する紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。',
+                              style: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Poppins',
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Text(
+                              '9. 当社は、当個人情報保護方針をいつでも変更することができるものとします。',
+                              style: FlutterFlowTheme.bodyText1.override(
+                                fontFamily: 'Poppins',
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            child: Text(
+                              '2021年7月2日 制定',
                               textAlign: TextAlign.end,
-                              style: FlutterFlowTheme.title3.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                            child: Text(
-                              '社名由来：Particle Drawing',
-                              style: FlutterFlowTheme.title1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                            child: Text(
-                              '組織、プロジェクトなど関わる人それぞれを、異なる性質（思い、主観、美意識など）を持つ粒子【particle】と捉え、 その粒子が集まって同じものはない未来の絵（設計図、アートなど）を描く【drawing】関係性を作り上げたい。 また、プロジェクト対象物を粒子のように細かく分解し、それが持つ性質に気づき・発見し、 対象物が示す新たな側面を描き出す手助けをする。',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              'パーパス：デザインドリブンの文化作りを支援',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              'デザインドリブン：創造・実験・失敗の繰り返しを称賛する',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(40, 20, 20, 0),
-                            child: Text(
-                              '事業領域：ビジネスデザイン',
                               style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
                               ),
