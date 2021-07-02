@@ -3,18 +3,18 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
 import '../products_page/products_page_widget.dart';
+import '../products_page_copy/products_page_copy_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PrivacyPolicyPageWidget extends StatefulWidget {
-  PrivacyPolicyPageWidget({Key key}) : super(key: key);
+class PrivacyPolicyPaWidget extends StatefulWidget {
+  PrivacyPolicyPaWidget({Key key}) : super(key: key);
 
   @override
-  _PrivacyPolicyPageWidgetState createState() =>
-      _PrivacyPolicyPageWidgetState();
+  _PrivacyPolicyPaWidgetState createState() => _PrivacyPolicyPaWidgetState();
 }
 
-class _PrivacyPolicyPageWidgetState extends State<PrivacyPolicyPageWidget> {
+class _PrivacyPolicyPaWidgetState extends State<PrivacyPolicyPaWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -284,7 +284,7 @@ class _PrivacyPolicyPageWidgetState extends State<PrivacyPolicyPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Text(
-                            '6. 当社が取得した個人情報は、当社施設または当社契約先サービスプロバイダの所在国において保存および処理されることがあります。当社に情報を開示することにより、日本、英国及び米国を含む、ご本人が居住する国以外の国に情報が転送されることに同意したものとみなされます。これらの国は、ご本人が居住する国または情報を最初に提供したときの所在国とは異なるデータ保護規則を有する可能性があります。\\n',
+                            '6. 当社が取得した個人情報は、当社施設または当社契約先サービスプロバイダの所在国において保存および処理されることがあります。当社に情報を開示することにより、日本、英国及び米国を含む、ご本人が居住する国以外の国に情報が転送されることに同意したものとみなされます。これらの国は、ご本人が居住する国または情報を最初に提供したときの所在国とは異なるデータ保護規則を有する可能性があります。',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
@@ -444,7 +444,7 @@ class _PrivacyPolicyPageWidgetState extends State<PrivacyPolicyPageWidget> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    PrivacyPolicyPageWidget(),
+                                                    PrivacyPolicyPaWidget(),
                                               ),
                                             );
                                           },
