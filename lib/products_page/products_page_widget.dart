@@ -1,18 +1,18 @@
+import '../about_page/about_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
-import '../products_page/products_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AboutPageWidget extends StatefulWidget {
-  AboutPageWidget({Key key}) : super(key: key);
+class ProductsPageWidget extends StatefulWidget {
+  ProductsPageWidget({Key key}) : super(key: key);
 
   @override
-  _AboutPageWidgetState createState() => _AboutPageWidgetState();
+  _ProductsPageWidgetState createState() => _ProductsPageWidgetState();
 }
 
-class _AboutPageWidgetState extends State<AboutPageWidget> {
+class _ProductsPageWidgetState extends State<ProductsPageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -165,7 +165,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                             child: Text(
-                              'About',
+                              'Products',
                               textAlign: TextAlign.center,
                               style: FlutterFlowTheme.title1.override(
                                 fontFamily: 'Poppins',
@@ -336,7 +336,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            padding: EdgeInsets.fromLTRB(40, 10, 20, 0),
                             child: Text(
                               'イノベーション・スキルセット - BTC人材へのファーストス テップ 修了',
                               style: FlutterFlowTheme.bodyText1.override(
@@ -345,7 +345,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            padding: EdgeInsets.fromLTRB(40, 10, 20, 0),
                             child: Text(
                               'Drawing to [...] - a guide to thinking through drawing 修了',
                               style: FlutterFlowTheme.bodyText1.override(
@@ -354,7 +354,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            padding: EdgeInsets.fromLTRB(40, 10, 20, 0),
                             child: Text(
                               'Designing the Wow! 修了',
                               style: FlutterFlowTheme.bodyText1.override(
@@ -363,7 +363,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            padding: EdgeInsets.fromLTRB(40, 10, 20, 0),
                             child: Text(
                               'CIRCULAR ECONOMY – The Future of Business 修了',
                               style: FlutterFlowTheme.bodyText1.override(
@@ -381,7 +381,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            padding: EdgeInsets.fromLTRB(40, 10, 20, 0),
                             child: Text(
                               'Notion',
                               style: FlutterFlowTheme.bodyText1.override(
@@ -390,7 +390,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            padding: EdgeInsets.fromLTRB(40, 10, 20, 0),
                             child: Text(
                               'Figma',
                               style: FlutterFlowTheme.bodyText1.override(
@@ -399,7 +399,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            padding: EdgeInsets.fromLTRB(40, 10, 20, 0),
                             child: Text(
                               'Miro',
                               style: FlutterFlowTheme.bodyText1.override(
@@ -408,7 +408,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            padding: EdgeInsets.fromLTRB(40, 10, 20, 0),
                             child: Text(
                               'Flutter / FlutterFlow',
                               style: FlutterFlowTheme.bodyText1.override(
@@ -417,7 +417,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                            padding: EdgeInsets.fromLTRB(40, 10, 20, 0),
                             child: Text(
                               'VScode',
                               style: FlutterFlowTheme.bodyText1.override(
