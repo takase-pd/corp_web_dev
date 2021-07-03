@@ -1,9 +1,10 @@
 import '../about_page/about_page_widget.dart';
+import '../components/footer_widget.dart';
+import '../components/header_widget.dart';
+import '../contact_page/contact_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../privacy_policy_pa/privacy_policy_pa_widget.dart';
 import '../products_page/products_page_widget.dart';
-import '../products_page_copy/products_page_copy_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -21,6 +22,23 @@ class _HomePageWidgetState extends State<HomePageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          await Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ContactPageWidget(),
+            ),
+          );
+        },
+        backgroundColor: FlutterFlowTheme.primaryColor,
+        elevation: 8,
+        child: Icon(
+          Icons.message,
+          color: Colors.black,
+          size: 24,
+        ),
+      ),
       body: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -40,45 +58,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Container(
-                    width: 100,
-                    height: 150,
-                    decoration: BoxDecoration(
-                      color: Color(0xFFEEEEEE),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                                child: Text(
-                                  'Particle Drawing',
-                                  style: FlutterFlowTheme.title2.override(
-                                    fontFamily: 'Poppins',
-                                    fontSize: 18,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                'a Design Driven Company',
-                                style: FlutterFlowTheme.subtitle1.override(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 12,
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                  HeaderWidget(),
                   Padding(
                     padding: EdgeInsets.fromLTRB(0, 10, 0, 20),
                     child: Row(
@@ -460,151 +440,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(0, 100, 0, 0),
-                    child: Container(
-                      width: 100,
-                      height: 300,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF565656),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(30, 30, 20, 20),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 0, 50, 0),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.fromLTRB(0, 0, 0, 20),
-                                        child: InkWell(
-                                          onTap: () async {
-                                            await Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    HomePageWidget(),
-                                              ),
-                                            );
-                                          },
-                                          child: Text(
-                                            'Home',
-                                            style: FlutterFlowTheme.bodyText1
-                                                .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.fromLTRB(0, 0, 0, 20),
-                                        child: InkWell(
-                                          onTap: () async {
-                                            await Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    AboutPageWidget(),
-                                              ),
-                                            );
-                                          },
-                                          child: Text(
-                                            'About',
-                                            style: FlutterFlowTheme.bodyText1
-                                                .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.fromLTRB(0, 0, 0, 20),
-                                        child: InkWell(
-                                          onTap: () async {
-                                            await Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ProductsPageWidget(),
-                                              ),
-                                            );
-                                          },
-                                          child: Text(
-                                            'Products',
-                                            style: FlutterFlowTheme.bodyText1
-                                                .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 0, 50, 0),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.fromLTRB(0, 0, 0, 20),
-                                        child: InkWell(
-                                          onTap: () async {
-                                            await Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    PrivacyPolicyPaWidget(),
-                                              ),
-                                            );
-                                          },
-                                          child: Text(
-                                            'Privacy Policy',
-                                            style: FlutterFlowTheme.bodyText1
-                                                .override(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                            Text(
-                              'Copyright © 2021 Particle Drawing G.K. All rights reserved',
-                              style: FlutterFlowTheme.subtitle2.override(
-                                fontFamily: 'Poppins',
-                                color: Color(0xFFDCDCDC),
-                                fontSize: 10,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
+                    padding: EdgeInsets.fromLTRB(0, 80, 0, 0),
+                    child: FooterWidget(),
                   )
                 ],
               ),
