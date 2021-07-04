@@ -1,5 +1,4 @@
 import '../about_page/about_page_widget.dart';
-import '../contact_page/contact_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
@@ -124,26 +123,6 @@ class _FooterWidgetState extends State<FooterWidget> {
                           },
                           child: Text(
                             'Privacy Policy',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
-                        child: InkWell(
-                          onTap: () async {
-                            await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ContactPageWidget(),
-                              ),
-                            );
-                          },
-                          child: Text(
-                            'Contact',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                               color: Colors.white,

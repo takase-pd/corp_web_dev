@@ -1,7 +1,6 @@
 import '../about_page/about_page_widget.dart';
 import '../components/footer_widget.dart';
 import '../components/header_widget.dart';
-import '../contact_page/contact_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../products_page/products_page_widget.dart';
@@ -22,23 +21,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          await Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ContactPageWidget(),
-            ),
-          );
-        },
-        backgroundColor: FlutterFlowTheme.primaryColor,
-        elevation: 8,
-        child: Icon(
-          Icons.message,
-          color: Colors.black,
-          size: 24,
-        ),
-      ),
       body: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
