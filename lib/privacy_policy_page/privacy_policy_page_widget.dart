@@ -1,3 +1,4 @@
+import '../about_page/about_page_widget.dart';
 import '../components/footer_widget.dart';
 import '../components/header_widget.dart';
 import '../contact_page/contact_page_widget.dart';
@@ -8,14 +9,15 @@ import '../products_page/products_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AboutPageWidget extends StatefulWidget {
-  AboutPageWidget({Key key}) : super(key: key);
+class PrivacyPolicyPageWidget extends StatefulWidget {
+  PrivacyPolicyPageWidget({Key key}) : super(key: key);
 
   @override
-  _AboutPageWidgetState createState() => _AboutPageWidgetState();
+  _PrivacyPolicyPageWidgetState createState() =>
+      _PrivacyPolicyPageWidgetState();
 }
 
-class _AboutPageWidgetState extends State<AboutPageWidget> {
+class _PrivacyPolicyPageWidgetState extends State<PrivacyPolicyPageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -99,7 +101,6 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                               'About',
                               style: FlutterFlowTheme.subtitle2.override(
                                 fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
@@ -130,7 +131,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                     alignment: Alignment(0, 0),
                     children: [
                       Image.network(
-                        'https://picsum.photos/id/625/2507/1674',
+                        'https://picsum.photos/id/444/4288/2848',
                         width: double.infinity,
                         height: 500,
                         fit: BoxFit.cover,
@@ -146,7 +147,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Text(
-                            'About',
+                            '個人情報保護方針',
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.title1.override(
                               fontFamily: 'Poppins',
@@ -155,36 +156,9 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            '会社名',
-                            style: FlutterFlowTheme.title1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Text(
-                            'Particle Drawing合同会社（Particle Drawing G.K.）',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            '所在地',
-                            style: FlutterFlowTheme.title1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            '〒261-0013',
+                            'Particle Drawing合同会社（以下、「当社」といいます。）は、下記の個人情報保護方針に則り、当社ウェブサイト閲覧者、お客様、取引関係者等（以下「ご本人」といいます。）の個人情報（以下「個人情報」といいます。）を安全かつ適切に取り扱います。',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
@@ -193,7 +167,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Text(
-                            '千葉県千葉市美浜区打瀬1-11-1',
+                            '1. 当個人情報保護方針は、当社がご本人から取得した個人情報について適用されます。',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
@@ -202,79 +176,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Text(
-                            '1-11-1 Utase, Mihama-ku, Chiba-shi, Chiba',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            '設立',
-                            style: FlutterFlowTheme.title1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            '2019年8月',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            '資本金',
-                            style: FlutterFlowTheme.title1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            '300,000円',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            '代表者名',
-                            style: FlutterFlowTheme.title1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            '高瀬 裕治 Yuji Takase',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            '略歴',
-                            style: FlutterFlowTheme.title2.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            '大学院修士までグリッド(Grid Computing)をベースにしたシステム構築を研究。',
+                            '2. 当社が取得した個人情報について、不正アクセス、紛失、漏洩等が発生しないよう、個人情報取扱規定を整備し、これらの危険に対する安全対策を積極的に実施します。',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
@@ -283,43 +185,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Text(
-                            'CAE（Computer Aided Engineering）企業でエンジニアを経験後、営業部門へ異動し多目的最適化支援ツールの新規顧客向け提案を担当。',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            'マーケティングリサーチのスタートアップ企業に移り、インターネット行動分析事業立ち上げに携わる。航空、流通、金融、食品飲料、不動産、シンクタンク等の各業界のリーディングカンパニーのリサーチ・アナリティクス、デジタルマーケティングを支援。当事業の売り上げゼロから2桁億円超まで、トップコンサルタントとして牽引。',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            '20年間にわたり携わるデジタル分野の経験を土台に、デザインやアートの考え方を用いて事業成長を支援するParticle Drawingを創業、現職。',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            'DLX Design Academy',
-                            style: FlutterFlowTheme.title2.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
-                          child: Text(
-                            'イノベーション・スキルセット - BTC人材へのファーストス テップ 修了',
+                            '3. 当社が取得した個人情報は当社にて厳重に管理し、ご本人の同意を得た場合又は法令により例外が認められる場合を除き、取得の際に予め明示した目的又は以下の利用目的の範囲内で利用いたします。',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
@@ -328,7 +194,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                           child: Text(
-                            'Drawing to [...] - a guide to thinking through drawing 修了',
+                            'a. 各種問い合わせ、ご依頼に対する対応',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
@@ -337,7 +203,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                           child: Text(
-                            'Designing the Wow! 修了',
+                            'b.  製品・サービスの企画、研究、開発等',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
@@ -346,25 +212,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                           child: Text(
-                            'CIRCULAR ECONOMY – The Future of Business 修了',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            'Favorite Tools',
-                            style: FlutterFlowTheme.title2.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
-                          child: Text(
-                            'Notion',
+                            'c. 製品・サービスに関する案内、提供、管理',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
@@ -373,7 +221,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                           child: Text(
-                            'Figma',
+                            'd. セミナー、講演、展示会、イベント等の案内、運営、管理',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
@@ -382,7 +230,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                           child: Text(
-                            'Miro',
+                            'e. メールニュース配信',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
@@ -391,34 +239,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                           child: Text(
-                            'Flutter / FlutterFlow',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
-                          child: Text(
-                            'VScode',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            'パーパス',
-                            style: FlutterFlowTheme.title1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            'デザインドリブンの文化作りを支援',
+                            'f. 上記各号に関連する全ての業務',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
@@ -427,17 +248,8 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Text(
-                            'デザインドリブン：創造・実験・失敗の繰り返しを称賛する',
+                            '4. 当社は、当社が取得した個人情報について、法令により例外が認められる場合を除き、ご本人の同意を得ることなく第三者に提供することはございません。',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            '事業内容',
-                            style: FlutterFlowTheme.title1.override(
                               fontFamily: 'Poppins',
                             ),
                           ),
@@ -445,17 +257,8 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Text(
-                            'ビジネスデザイン、ブランドデザイン、DXデザイン、サービスデザイン、組織デザイン',
+                            '5. ご本人が前項に定める開示等を求められる場合、又は自己の個人情報の取扱いについてご指摘いただく場合には、こちら [info[at]particledrawing.com] よりご連絡下さい。',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            '取引金融機関',
-                            style: FlutterFlowTheme.title1.override(
                               fontFamily: 'Poppins',
                             ),
                           ),
@@ -463,17 +266,8 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Text(
-                            '住信SBIネット銀行、ジャパンネット銀行',
+                            '6. 当社が取得した個人情報は、当社施設または当社契約先サービスプロバイダの所在国において保存および処理されることがあります。当社に情報を開示することにより、日本、英国及び米国を含む、ご本人が居住する国以外の国に情報が転送されることに同意したものとみなされます。これらの国は、ご本人が居住する国または情報を最初に提供したときの所在国とは異なるデータ保護規則を有する可能性があります。',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Text(
-                            '問い合わせ',
-                            style: FlutterFlowTheme.title1.override(
                               fontFamily: 'Poppins',
                             ),
                           ),
@@ -481,7 +275,35 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Text(
-                            'info [ at ] particledrawing.com',
+                            '7. 当社が取得した個人情報の取扱い及び管理、並びに本個人情報保護方針の効力及び解釈については、日本法を準拠法とします。',
+                            style: FlutterFlowTheme.bodyText1.override(
+                              fontFamily: 'Poppins',
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: Text(
+                            '8. 当社が取得した個人情報及び本個人情報保護方針に関する紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。',
+                            style: FlutterFlowTheme.bodyText1.override(
+                              fontFamily: 'Poppins',
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: Text(
+                            '9. 当社は、当個人情報保護方針をいつでも変更することができるものとします。',
+                            style: FlutterFlowTheme.bodyText1.override(
+                              fontFamily: 'Poppins',
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                          child: Text(
+                            '2021年7月2日 制定',
+                            textAlign: TextAlign.end,
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                             ),
