@@ -70,6 +70,13 @@ class _$ContactsRecordSerializer
         ..add(
             serializers.serialize(value, specifiedType: const FullType(bool)));
     }
+    value = object.timestamp;
+    if (value != null) {
+      result
+        ..add('timestamp')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(DateTime)));
+    }
     value = object.reference;
     if (value != null) {
       result
@@ -120,6 +127,10 @@ class _$ContactsRecordSerializer
           result.check = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'timestamp':
+          result.timestamp = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
+          break;
         case 'Document__Reference__Field':
           result.reference = serializers.deserialize(value,
                   specifiedType: const FullType(DocumentReference))
@@ -148,6 +159,8 @@ class _$ContactsRecord extends ContactsRecord {
   @override
   final bool check;
   @override
+  final DateTime timestamp;
+  @override
   final DocumentReference reference;
 
   factory _$ContactsRecord([void Function(ContactsRecordBuilder) updates]) =>
@@ -161,6 +174,7 @@ class _$ContactsRecord extends ContactsRecord {
       this.subject,
       this.message,
       this.check,
+      this.timestamp,
       this.reference})
       : super._();
 
@@ -183,6 +197,7 @@ class _$ContactsRecord extends ContactsRecord {
         subject == other.subject &&
         message == other.message &&
         check == other.check &&
+        timestamp == other.timestamp &&
         reference == other.reference;
   }
 
@@ -193,12 +208,14 @@ class _$ContactsRecord extends ContactsRecord {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, name.hashCode), email.hashCode),
-                            phone.hashCode),
-                        occupation.hashCode),
-                    subject.hashCode),
-                message.hashCode),
-            check.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, name.hashCode), email.hashCode),
+                                phone.hashCode),
+                            occupation.hashCode),
+                        subject.hashCode),
+                    message.hashCode),
+                check.hashCode),
+            timestamp.hashCode),
         reference.hashCode));
   }
 
@@ -212,6 +229,7 @@ class _$ContactsRecord extends ContactsRecord {
           ..add('subject', subject)
           ..add('message', message)
           ..add('check', check)
+          ..add('timestamp', timestamp)
           ..add('reference', reference))
         .toString();
   }
@@ -249,6 +267,10 @@ class ContactsRecordBuilder
   bool get check => _$this._check;
   set check(bool check) => _$this._check = check;
 
+  DateTime _timestamp;
+  DateTime get timestamp => _$this._timestamp;
+  set timestamp(DateTime timestamp) => _$this._timestamp = timestamp;
+
   DocumentReference _reference;
   DocumentReference get reference => _$this._reference;
   set reference(DocumentReference reference) => _$this._reference = reference;
@@ -267,6 +289,7 @@ class ContactsRecordBuilder
       _subject = $v.subject;
       _message = $v.message;
       _check = $v.check;
+      _timestamp = $v.timestamp;
       _reference = $v.reference;
       _$v = null;
     }
@@ -295,6 +318,7 @@ class ContactsRecordBuilder
             subject: subject,
             message: message,
             check: check,
+            timestamp: timestamp,
             reference: reference);
     replace(_$result);
     return _$result;
