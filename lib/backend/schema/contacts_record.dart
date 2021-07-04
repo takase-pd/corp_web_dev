@@ -33,6 +33,9 @@ abstract class ContactsRecord
   bool get check;
 
   @nullable
+  DateTime get timestamp;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -70,6 +73,7 @@ Map<String, dynamic> createContactsRecordData({
   String subject,
   String message,
   bool check,
+  DateTime timestamp,
 }) =>
     serializers.toFirestore(
         ContactsRecord.serializer,
@@ -80,4 +84,5 @@ Map<String, dynamic> createContactsRecordData({
           ..occupation = occupation
           ..subject = subject
           ..message = message
-          ..check = check));
+          ..check = check
+          ..timestamp = timestamp));

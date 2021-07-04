@@ -642,6 +642,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                         phone: textController4.text,
                                         subject: dropDownValue,
                                         message: textController5.text,
+                                        timestamp: getCurrentTimestamp,
                                       );
                                       await ContactsRecord.collection
                                           .doc()
