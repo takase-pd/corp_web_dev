@@ -1,5 +1,4 @@
 import '../about_page/about_page_widget.dart';
-import '../backend/backend.dart';
 import '../components/footer_widget.dart';
 import '../components/header_widget.dart';
 import '../flutter_flow/flutter_flow_drop_down_template.dart';
@@ -9,7 +8,6 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import '../home_page/home_page_widget.dart';
 import '../privacy_policy_page/privacy_policy_page_widget.dart';
 import '../products_page/products_page_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -633,20 +631,6 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                   padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      final contactsRecordData =
-                                          createContactsRecordData(
-                                        name: textController1.text,
-                                        check: checkboxListTileValue,
-                                        email: textController2.text,
-                                        occupation: textController3.text,
-                                        phone: textController4.text,
-                                        subject: dropDownValue,
-                                        message: textController5.text,
-                                        timestamp: getCurrentTimestamp,
-                                      );
-                                      await ContactsRecord.collection
-                                          .doc()
-                                          .set(contactsRecordData);
                                       await showDialog(
                                         context: context,
                                         builder: (alertDialogContext) {
