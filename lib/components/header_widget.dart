@@ -68,7 +68,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                 padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: InkWell(
                   onTap: () async {
-                    await Navigator.pushNanmed(
+                    await Navigator.pushNamed(
                       context,
                       '/'
                     );
