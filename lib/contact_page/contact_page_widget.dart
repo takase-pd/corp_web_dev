@@ -1,13 +1,11 @@
-import '../about_page/about_page_widget.dart';
 import '../components/footer_widget.dart';
 import '../components/header_widget.dart';
 import '../flutter_flow/flutter_flow_drop_down_template.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../home_page/home_page_widget.dart';
 import '../privacy_policy_page/privacy_policy_page_widget.dart';
-import '../products_page/products_page_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -79,78 +77,11 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   HeaderWidget(),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0, 10, 0, 20),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                          child: InkWell(
-                            onTap: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => HomePageWidget(),
-                                ),
-                              );
-                            },
-                            child: Text(
-                              'Home',
-                              style: FlutterFlowTheme.subtitle2.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                          child: InkWell(
-                            onTap: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => AboutPageWidget(),
-                                ),
-                              );
-                            },
-                            child: Text(
-                              'About',
-                              style: FlutterFlowTheme.subtitle2.override(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                          child: InkWell(
-                            onTap: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => ProductsPageWidget(),
-                                ),
-                              );
-                            },
-                            child: Text(
-                              'Products',
-                              style: FlutterFlowTheme.subtitle2.override(
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.normal,
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
                   Stack(
                     alignment: Alignment(0, 0),
                     children: [
-                      Image.network(
-                        'https://picsum.photos/id/486/7500/11000',
+                      CachedNetworkImage(
+                        imageUrl: 'https://picsum.photos/id/486/7500/11000',
                         width: double.infinity,
                         height: 500,
                         fit: BoxFit.cover,
