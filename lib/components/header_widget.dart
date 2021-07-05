@@ -68,11 +68,9 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                 padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: InkWell(
                   onTap: () async {
-                    await Navigator.push(
+                    await Navigator.pushNanmed(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => HomePageWidget(),
-                      ),
+                      '/'
                     );
                   },
                   child: Text(
@@ -88,11 +86,9 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                 padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: InkWell(
                   onTap: () async {
-                    await Navigator.push(
+                    await Navigator.pushNamed(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => AboutPageWidget(),
-                      ),
+                      '/about'
                     );
                   },
                   child: Text(
@@ -107,11 +103,9 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                 padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: InkWell(
                   onTap: () async {
-                    await Navigator.push(
+                    await Navigator.pushNamed(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => ProductsPageWidget(),
-                      ),
+                      '/products'
                     );
                   },
                   child: Text(
