@@ -44,11 +44,9 @@ class _FooterWidgetState extends State<FooterWidget> {
                         padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
-                            await Navigator.push(
+                            await Navigator.pushNamed(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) => HomePageWidget(),
-                              ),
+                              '/'
                             );
                           },
                           child: Text(
@@ -64,11 +62,9 @@ class _FooterWidgetState extends State<FooterWidget> {
                         padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
-                            await Navigator.push(
+                            await Navigator.pushNamed(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) => AboutPageWidget(),
-                              ),
+                              '/about'
                             );
                           },
                           child: Text(
@@ -85,11 +81,9 @@ class _FooterWidgetState extends State<FooterWidget> {
                         padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
-                            await Navigator.push(
+                            await Navigator.pushNamed(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) => ProductsPageWidget(),
-                              ),
+                              '/products'
                             );
                           },
                           child: Text(
@@ -114,11 +108,9 @@ class _FooterWidgetState extends State<FooterWidget> {
                         padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
-                            await Navigator.push(
+                            await Navigator.pushNamed(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) => PrivacyPolicyPageWidget(),
-                              ),
+                              '/privacy'
                             );
                           },
                           child: Text(
