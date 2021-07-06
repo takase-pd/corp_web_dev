@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'PdCorpWeb',
+      title: 'Particle Drawing | ビジネスデザイン',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: HomePageWidget(),
     );
