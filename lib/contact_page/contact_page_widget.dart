@@ -1,3 +1,4 @@
+import '../backend/backend.dart';
 import '../components/footer_widget.dart';
 import '../components/header_widget.dart';
 import '../flutter_flow/flutter_flow_drop_down_template.dart';
@@ -6,6 +7,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../privacy_policy_page/privacy_policy_page_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -583,25 +585,46 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: Text('送信しました'),
-                                            content: Text(
-                                                'お問い合わせありがとうございます。担当者からの返信をお待ち下さい。'),
+                                            title: Text('送信確認'),
+                                            content:
+                                                Text('この内容で送信します。よろしいですか？'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: Text('Ok'),
+                                                child: Text('戻る'),
+                                              ),
+                                              TextButton(
+                                                onPressed: () async {
+                                                  Navigator.pop(
+                                                      alertDialogContext);
+
+                                                  final contactsRecordData =
+                                                      createContactsRecordData(
+                                                    name: textController1.text,
+                                                    email: textController2.text,
+                                                    occupation:
+                                                        textController3.text,
+                                                    phone: textController4.text,
+                                                    subject: dropDownValue,
+                                                    message:
+                                                        textController5.text,
+                                                    check:
+                                                        checkboxListTileValue,
+                                                    timestamp:
+                                                        getCurrentTimestamp,
+                                                  );
+                                                  await ContactsRecord
+                                                      .collection
+                                                      .doc()
+                                                      .set(contactsRecordData);
+                                                  ;
+                                                },
+                                                child: Text('OK'),
                                               ),
                                             ],
                                           );
                                         },
-                                      );
-                                      await Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              ContactPageWidget(),
-                                        ),
                                       );
                                     },
                                     text: '送信：Send',
