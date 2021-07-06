@@ -15,11 +15,38 @@ abstract class ContactsRecord
   String get name;
 
   @nullable
+  String get email;
+
+  @nullable
+  String get occupation;
+
+  @nullable
+  String get phone;
+
+  @nullable
+  String get subject;
+
+  @nullable
+  String get message;
+
+  @nullable
+  bool get check;
+
+  @nullable
+  DateTime get timestamp;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
-  static void _initializeBuilder(ContactsRecordBuilder builder) =>
-      builder..name = '';
+  static void _initializeBuilder(ContactsRecordBuilder builder) => builder
+    ..name = ''
+    ..email = ''
+    ..occupation = ''
+    ..phone = ''
+    ..subject = ''
+    ..message = ''
+    ..check = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('contacts');
@@ -40,6 +67,22 @@ abstract class ContactsRecord
 
 Map<String, dynamic> createContactsRecordData({
   String name,
+  String email,
+  String occupation,
+  String phone,
+  String subject,
+  String message,
+  bool check,
+  DateTime timestamp,
 }) =>
     serializers.toFirestore(
-        ContactsRecord.serializer, ContactsRecord((c) => c..name = name));
+        ContactsRecord.serializer,
+        ContactsRecord((c) => c
+          ..name = name
+          ..email = email
+          ..occupation = occupation
+          ..phone = phone
+          ..subject = subject
+          ..message = message
+          ..check = check
+          ..timestamp = timestamp));
