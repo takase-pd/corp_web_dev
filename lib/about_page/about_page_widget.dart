@@ -23,12 +23,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
       key: scaffoldKey,
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          await Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ContactPageWidget(),
-            ),
-          );
+          await Navigator.pushNamed(context, '/contact');
         },
         backgroundColor: Color(0xFFB4B4B4),
         elevation: 8,
