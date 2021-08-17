@@ -36,6 +36,12 @@ abstract class ContactsRecord
   DateTime get timestamp;
 
   @nullable
+  String get to;
+
+  @nullable
+  String get bccUids;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -46,7 +52,9 @@ abstract class ContactsRecord
     ..phone = ''
     ..subject = ''
     ..message = ''
-    ..check = false;
+    ..check = false
+    ..to = ''
+    ..bccUids = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('contacts');
@@ -74,6 +82,8 @@ Map<String, dynamic> createContactsRecordData({
   String message,
   bool check,
   DateTime timestamp,
+  String to,
+  String bccUids,
 }) =>
     serializers.toFirestore(
         ContactsRecord.serializer,
@@ -85,4 +95,6 @@ Map<String, dynamic> createContactsRecordData({
           ..subject = subject
           ..message = message
           ..check = check
-          ..timestamp = timestamp));
+          ..timestamp = timestamp
+          ..to = to
+          ..bccUids = bccUids));

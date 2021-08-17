@@ -59,6 +59,17 @@ class _PrivacyPolicyPageWidgetState extends State<PrivacyPolicyPageWidget> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   HeaderWidget(),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(0, 30, 0, 20),
+                    child: Text(
+                      '個人情報保護方針',
+                      textAlign: TextAlign.center,
+                      style: FlutterFlowTheme.title1.override(
+                        fontFamily: 'Poppins',
+                        fontSize: 36,
+                      ),
+                    ),
+                  ),
                   Stack(
                     alignment: Alignment(0, 0),
                     children: [
@@ -76,17 +87,6 @@ class _PrivacyPolicyPageWidgetState extends State<PrivacyPolicyPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            '個人情報保護方針',
-                            textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.title1.override(
-                              fontFamily: 'Poppins',
-                              fontSize: 36,
-                            ),
-                          ),
-                        ),
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                           child: Text(

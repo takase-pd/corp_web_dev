@@ -26,6 +26,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
   TextEditingController textController4;
   TextEditingController textController5;
   bool checkboxListTileValue;
+  final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -40,630 +41,662 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: scaffoldKey,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          await Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ContactPageWidget(),
-            ),
-          );
-        },
-        backgroundColor: FlutterFlowTheme.primaryColor,
-        elevation: 8,
-        child: Icon(
-          Icons.message,
-          color: Colors.black,
-          size: 24,
-        ),
-      ),
-      body: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 1,
-            constraints: BoxConstraints(
-              maxWidth: 1000,
-            ),
-            decoration: BoxDecoration(
-              color: Color(0x00FFFFFF),
-            ),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  HeaderWidget(),
-                  Stack(
-                    alignment: Alignment(0, 0),
-                    children: [
-                      CachedNetworkImage(
-                        imageUrl: 'https://picsum.photos/id/486/7500/11000',
-                        width: double.infinity,
-                        height: 500,
-                        fit: BoxFit.cover,
-                      )
-                    ],
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          child: Text(
-                            'Contact',
-                            textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.title1.override(
-                              fontFamily: 'Poppins',
-                              fontSize: 36,
-                            ),
-                          ),
+    return Form(
+      key: formKey,
+      child: Scaffold(
+        key: scaffoldKey,
+        body: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height * 1,
+              constraints: BoxConstraints(
+                maxWidth: 1000,
+              ),
+              decoration: BoxDecoration(
+                color: Color(0x00FFFFFF),
+              ),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    HeaderWidget(),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(0, 30, 0, 20),
+                      child: Text(
+                        'Contact',
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.title1.override(
+                          fontFamily: 'Poppins',
+                          fontSize: 36,
                         ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Text(
-                                'Particle Drawingへの案件・プロジェクトのご相談や、採用、その他のお問い合わせは、以下のフォームからご連絡ください。担当者からご返信を差し上げます。',
-                                style: FlutterFlowTheme.bodyText1.override(
-                                  fontFamily: 'Poppins',
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        width: 330,
-                                        height: 60,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          border: Border.all(
-                                            color: Color(0xFFE6E6E6),
-                                          ),
-                                        ),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(16, 0, 0, 0),
-                                          child: TextFormField(
-                                            controller: textController1,
-                                            obscureText: false,
-                                            decoration: InputDecoration(
-                                              labelText: 'お名前：Name',
-                                              labelStyle: FlutterFlowTheme
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Color(0xFF8B97A2),
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                              enabledBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0x00000000),
-                                                  width: 1,
-                                                ),
-                                                borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
-                                              ),
-                                              focusedBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0x00000000),
-                                                  width: 1,
-                                                ),
-                                                borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
-                                              ),
-                                            ),
-                                            style: FlutterFlowTheme.bodyText2
-                                                .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        width: 330,
-                                        height: 60,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          border: Border.all(
-                                            color: Color(0xFFE6E6E6),
-                                          ),
-                                        ),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(16, 0, 0, 0),
-                                          child: TextFormField(
-                                            controller: textController2,
-                                            obscureText: false,
-                                            decoration: InputDecoration(
-                                              labelText: 'メール：Email',
-                                              labelStyle: FlutterFlowTheme
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Color(0xFF8B97A2),
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                              enabledBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0x00000000),
-                                                  width: 1,
-                                                ),
-                                                borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
-                                              ),
-                                              focusedBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0x00000000),
-                                                  width: 1,
-                                                ),
-                                                borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
-                                              ),
-                                            ),
-                                            style: FlutterFlowTheme.bodyText2
-                                                .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                            keyboardType:
-                                                TextInputType.emailAddress,
-                                          ),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        width: 330,
-                                        height: 60,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          border: Border.all(
-                                            color: Color(0xFFE6E6E6),
-                                          ),
-                                        ),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(16, 0, 0, 0),
-                                          child: TextFormField(
-                                            controller: textController3,
-                                            obscureText: false,
-                                            decoration: InputDecoration(
-                                              labelText: '所属：Organization',
-                                              labelStyle: FlutterFlowTheme
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Color(0xFF8B97A2),
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                              enabledBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0x00000000),
-                                                  width: 1,
-                                                ),
-                                                borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
-                                              ),
-                                              focusedBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0x00000000),
-                                                  width: 1,
-                                                ),
-                                                borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
-                                              ),
-                                            ),
-                                            style: FlutterFlowTheme.bodyText2
-                                                .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        width: 330,
-                                        height: 60,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          border: Border.all(
-                                            color: Color(0xFFE6E6E6),
-                                          ),
-                                        ),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(16, 0, 0, 0),
-                                          child: TextFormField(
-                                            controller: textController4,
-                                            obscureText: false,
-                                            decoration: InputDecoration(
-                                              labelText: '電話番号：Phone',
-                                              labelStyle: FlutterFlowTheme
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Color(0xFF8B97A2),
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                              enabledBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0x00000000),
-                                                  width: 1,
-                                                ),
-                                                borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
-                                              ),
-                                              focusedBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0x00000000),
-                                                  width: 1,
-                                                ),
-                                                borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
-                                              ),
-                                            ),
-                                            style: FlutterFlowTheme.bodyText2
-                                                .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                            keyboardType: TextInputType.phone,
-                                          ),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        width: 330,
-                                        height: 60,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          border: Border.all(
-                                            color: Color(0xFFE6E6E6),
-                                          ),
-                                        ),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(16, 0, 0, 0),
-                                          child: FlutterFlowDropDown(
-                                            options: [
-                                              '案件・プロジェクト：New Business',
-                                              '採用・インターン：Careers',
-                                              'その他'
-                                            ],
-                                            onChanged: (value) {
-                                              setState(
-                                                  () => dropDownValue = value);
-                                            },
-                                            width: 130,
-                                            height: 40,
-                                            textStyle: FlutterFlowTheme
-                                                .bodyText2
-                                                .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                            fillColor: Colors.white,
-                                            elevation: 2,
-                                            borderColor: Colors.transparent,
-                                            borderWidth: 0,
-                                            borderRadius: 0,
-                                            margin:
-                                                EdgeInsets.fromLTRB(8, 4, 8, 4),
-                                          ),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Container(
-                                        width: 330,
-                                        height: 200,
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          border: Border.all(
-                                            color: Color(0xFFE6E6E6),
-                                          ),
-                                        ),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(16, 0, 0, 0),
-                                          child: TextFormField(
-                                            controller: textController5,
-                                            obscureText: false,
-                                            decoration: InputDecoration(
-                                              labelText: 'お問い合わせ内容：Message',
-                                              labelStyle: FlutterFlowTheme
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Color(0xFF8B97A2),
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                              enabledBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0x00000000),
-                                                  width: 1,
-                                                ),
-                                                borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
-                                              ),
-                                              focusedBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0x00000000),
-                                                  width: 1,
-                                                ),
-                                                borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
-                                              ),
-                                            ),
-                                            style: FlutterFlowTheme.bodyText2
-                                                .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                            maxLines: 10,
-                                            keyboardType:
-                                                TextInputType.multiline,
-                                          ),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
-                                child: InkWell(
-                                  onTap: () async {
-                                    await Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            PrivacyPolicyPageWidget(),
-                                      ),
-                                    );
-                                  },
-                                  child: Text(
-                                    '※入力いただいた情報は個人情報保護方針に則り管理いたします。',
-                                    style: FlutterFlowTheme.bodyText1.override(
-                                      fontFamily: 'Poppins',
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              CheckboxListTile(
-                                value: checkboxListTileValue ?? false,
-                                onChanged: (newValue) => setState(
-                                    () => checkboxListTileValue = newValue),
-                                title: Text(
-                                  '上記内容に同意',
-                                  textAlign: TextAlign.start,
-                                  style: FlutterFlowTheme.bodyText2.override(
-                                    fontFamily: 'Poppins',
-                                  ),
-                                ),
-                                tileColor: Color(0x00FFFFFF),
-                                dense: false,
-                                controlAffinity:
-                                    ListTileControlAffinity.trailing,
-                              ),
-                              Align(
-                                alignment: Alignment(0.95, 0),
-                                child: Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
-                                  child: FFButtonWidget(
-                                    onPressed: () async {
-                                      await showDialog(
-                                        context: context,
-                                        builder: (alertDialogContext) {
-                                          return AlertDialog(
-                                            title: Text('送信確認'),
-                                            content:
-                                                Text('この内容で送信します。よろしいですか？'),
-                                            actions: [
-                                              TextButton(
-                                                onPressed: () => Navigator.pop(
-                                                    alertDialogContext),
-                                                child: Text('戻る'),
-                                              ),
-                                              TextButton(
-                                                onPressed: () async {
-                                                  Navigator.pop(
-                                                      alertDialogContext);
-
-                                                  final contactsRecordData =
-                                                      createContactsRecordData(
-                                                    name: textController1.text,
-                                                    email: textController2.text,
-                                                    occupation:
-                                                        textController3.text,
-                                                    phone: textController4.text,
-                                                    subject: dropDownValue,
-                                                    message:
-                                                        textController5.text,
-                                                    check:
-                                                        checkboxListTileValue,
-                                                    timestamp:
-                                                        getCurrentTimestamp,
-                                                  );
-                                                  await ContactsRecord
-                                                      .collection
-                                                      .doc()
-                                                      .set(contactsRecordData);
-                                                  ;
-                                                },
-                                                child: Text('OK'),
-                                              ),
-                                            ],
-                                          );
-                                        },
-                                      );
-                                    },
-                                    text: '送信：Send',
-                                    options: FFButtonOptions(
-                                      width: 140,
-                                      height: 60,
-                                      color: Color(0xFF8B97A2),
-                                      textStyle:
-                                          FlutterFlowTheme.subtitle2.override(
-                                        fontFamily: 'Montserrat',
-                                        color: Colors.white,
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                      elevation: 2,
-                                      borderSide: BorderSide(
-                                        color: Colors.transparent,
-                                        width: 2,
-                                      ),
-                                      borderRadius: 8,
-                                    ),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
+                      ),
+                    ),
+                    Stack(
+                      alignment: Alignment(0, 0),
+                      children: [
+                        CachedNetworkImage(
+                          imageUrl:
+                              'https://i.picsum.photos/id/852/3212/2409.jpg?hmac=9Dl4bKeO56pailgEulSkve2oLtehgdPwfcx8JQzpMro',
+                          width: double.infinity,
+                          height: 500,
+                          fit: BoxFit.cover,
                         )
                       ],
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0, 80, 0, 0),
-                    child: FooterWidget(),
-                  )
-                ],
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                Text(
+                                  'Particle Drawingへの案件・プロジェクトのご相談や、採用、その他のお問い合わせは、以下のフォームからご連絡ください。担当者からご返信を差し上げます。',
+                                  style: FlutterFlowTheme.bodyText1.override(
+                                    fontFamily: 'Poppins',
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Expanded(
+                                        child: Container(
+                                          width: 330,
+                                          height: 60,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            border: Border.all(
+                                              color: Color(0xFFE6E6E6),
+                                            ),
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.fromLTRB(
+                                                16, 0, 0, 0),
+                                            child: TextFormField(
+                                              controller: textController1,
+                                              obscureText: false,
+                                              decoration: InputDecoration(
+                                                labelText: 'お名前：Name',
+                                                labelStyle: FlutterFlowTheme
+                                                    .bodyText2
+                                                    .override(
+                                                  fontFamily: 'Montserrat',
+                                                  color: Color(0xFF8B97A2),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                                enabledBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius:
+                                                      const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(4.0),
+                                                    topRight:
+                                                        Radius.circular(4.0),
+                                                  ),
+                                                ),
+                                                focusedBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius:
+                                                      const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(4.0),
+                                                    topRight:
+                                                        Radius.circular(4.0),
+                                                  ),
+                                                ),
+                                              ),
+                                              style: FlutterFlowTheme.bodyText2
+                                                  .override(
+                                                fontFamily: 'Montserrat',
+                                                color: Color(0xFF8B97A2),
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                              validator: (val) {
+                                                if (val.isEmpty) {
+                                                  return 'お名前をご記入ください。';
+                                                }
+                                                if (val.length < 1) {
+                                                  return 'Requires at least 1 characters.';
+                                                }
+                                                return null;
+                                              },
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Expanded(
+                                        child: Container(
+                                          width: 330,
+                                          height: 60,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            border: Border.all(
+                                              color: Color(0xFFE6E6E6),
+                                            ),
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.fromLTRB(
+                                                16, 0, 0, 0),
+                                            child: TextFormField(
+                                              controller: textController2,
+                                              obscureText: false,
+                                              decoration: InputDecoration(
+                                                labelText: 'メール：Email',
+                                                labelStyle: FlutterFlowTheme
+                                                    .bodyText2
+                                                    .override(
+                                                  fontFamily: 'Montserrat',
+                                                  color: Color(0xFF8B97A2),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                                enabledBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius:
+                                                      const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(4.0),
+                                                    topRight:
+                                                        Radius.circular(4.0),
+                                                  ),
+                                                ),
+                                                focusedBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius:
+                                                      const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(4.0),
+                                                    topRight:
+                                                        Radius.circular(4.0),
+                                                  ),
+                                                ),
+                                              ),
+                                              style: FlutterFlowTheme.bodyText2
+                                                  .override(
+                                                fontFamily: 'Montserrat',
+                                                color: Color(0xFF8B97A2),
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                              keyboardType:
+                                                  TextInputType.emailAddress,
+                                              validator: (val) {
+                                                if (val.isEmpty) {
+                                                  return 'メールアドレスをご記入ください。';
+                                                }
+
+                                                return null;
+                                              },
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Expanded(
+                                        child: Container(
+                                          width: 330,
+                                          height: 60,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            border: Border.all(
+                                              color: Color(0xFFE6E6E6),
+                                            ),
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.fromLTRB(
+                                                16, 0, 0, 0),
+                                            child: TextFormField(
+                                              controller: textController3,
+                                              obscureText: false,
+                                              decoration: InputDecoration(
+                                                labelText: '所属：Organization',
+                                                labelStyle: FlutterFlowTheme
+                                                    .bodyText2
+                                                    .override(
+                                                  fontFamily: 'Montserrat',
+                                                  color: Color(0xFF8B97A2),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                                enabledBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius:
+                                                      const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(4.0),
+                                                    topRight:
+                                                        Radius.circular(4.0),
+                                                  ),
+                                                ),
+                                                focusedBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius:
+                                                      const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(4.0),
+                                                    topRight:
+                                                        Radius.circular(4.0),
+                                                  ),
+                                                ),
+                                              ),
+                                              style: FlutterFlowTheme.bodyText2
+                                                  .override(
+                                                fontFamily: 'Montserrat',
+                                                color: Color(0xFF8B97A2),
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Expanded(
+                                        child: Container(
+                                          width: 330,
+                                          height: 60,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            border: Border.all(
+                                              color: Color(0xFFE6E6E6),
+                                            ),
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.fromLTRB(
+                                                16, 0, 0, 0),
+                                            child: TextFormField(
+                                              controller: textController4,
+                                              obscureText: false,
+                                              decoration: InputDecoration(
+                                                labelText: '電話番号：Phone',
+                                                labelStyle: FlutterFlowTheme
+                                                    .bodyText2
+                                                    .override(
+                                                  fontFamily: 'Montserrat',
+                                                  color: Color(0xFF8B97A2),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                                enabledBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius:
+                                                      const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(4.0),
+                                                    topRight:
+                                                        Radius.circular(4.0),
+                                                  ),
+                                                ),
+                                                focusedBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius:
+                                                      const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(4.0),
+                                                    topRight:
+                                                        Radius.circular(4.0),
+                                                  ),
+                                                ),
+                                              ),
+                                              style: FlutterFlowTheme.bodyText2
+                                                  .override(
+                                                fontFamily: 'Montserrat',
+                                                color: Color(0xFF8B97A2),
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                              keyboardType: TextInputType.phone,
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Expanded(
+                                        child: Container(
+                                          width: 330,
+                                          height: 60,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            border: Border.all(
+                                              color: Color(0xFFE6E6E6),
+                                            ),
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.fromLTRB(
+                                                16, 0, 0, 0),
+                                            child: FlutterFlowDropDown(
+                                              options: [
+                                                '案件・プロジェクト：New Business',
+                                                '採用・インターン：Careers',
+                                                'その他'
+                                              ],
+                                              onChanged: (value) {
+                                                setState(() =>
+                                                    dropDownValue = value);
+                                              },
+                                              width: 130,
+                                              height: 40,
+                                              textStyle: FlutterFlowTheme
+                                                  .bodyText2
+                                                  .override(
+                                                fontFamily: 'Montserrat',
+                                                color: Color(0xFF8B97A2),
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                              fillColor: Colors.white,
+                                              elevation: 2,
+                                              borderColor: Colors.transparent,
+                                              borderWidth: 0,
+                                              borderRadius: 0,
+                                              margin: EdgeInsets.fromLTRB(
+                                                  8, 4, 8, 4),
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Expanded(
+                                        child: Container(
+                                          width: 330,
+                                          height: 200,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            border: Border.all(
+                                              color: Color(0xFFE6E6E6),
+                                            ),
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.fromLTRB(
+                                                16, 0, 0, 0),
+                                            child: TextFormField(
+                                              controller: textController5,
+                                              obscureText: false,
+                                              decoration: InputDecoration(
+                                                labelText: 'お問い合わせ内容：Message',
+                                                labelStyle: FlutterFlowTheme
+                                                    .bodyText2
+                                                    .override(
+                                                  fontFamily: 'Montserrat',
+                                                  color: Color(0xFF8B97A2),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                                enabledBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius:
+                                                      const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(4.0),
+                                                    topRight:
+                                                        Radius.circular(4.0),
+                                                  ),
+                                                ),
+                                                focusedBorder:
+                                                    UnderlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Color(0x00000000),
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius:
+                                                      const BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(4.0),
+                                                    topRight:
+                                                        Radius.circular(4.0),
+                                                  ),
+                                                ),
+                                              ),
+                                              style: FlutterFlowTheme.bodyText2
+                                                  .override(
+                                                fontFamily: 'Montserrat',
+                                                color: Color(0xFF8B97A2),
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                              maxLines: 10,
+                                              keyboardType:
+                                                  TextInputType.multiline,
+                                              validator: (val) {
+                                                if (val.isEmpty) {
+                                                  return 'お問い合わせ内容をご記入ください。';
+                                                }
+
+                                                return null;
+                                              },
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
+                                  child: InkWell(
+                                    onTap: () async {
+                                      await Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              PrivacyPolicyPageWidget(),
+                                        ),
+                                      );
+                                    },
+                                    child: Text(
+                                      '※入力いただいた情報は個人情報保護方針に則り管理いたします。',
+                                      style:
+                                          FlutterFlowTheme.bodyText1.override(
+                                        fontFamily: 'Poppins',
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                CheckboxListTile(
+                                  value: checkboxListTileValue ??= false,
+                                  onChanged: (newValue) => setState(
+                                      () => checkboxListTileValue = newValue),
+                                  title: Text(
+                                    '上記内容に同意',
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.bodyText2.override(
+                                      fontFamily: 'Poppins',
+                                    ),
+                                  ),
+                                  tileColor: Color(0x00FFFFFF),
+                                  dense: false,
+                                  controlAffinity:
+                                      ListTileControlAffinity.trailing,
+                                ),
+                                Align(
+                                  alignment: Alignment(0.95, 0),
+                                  child: Padding(
+                                    padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        if (!formKey.currentState.validate()) {
+                                          return;
+                                        }
+                                        await showDialog(
+                                          context: context,
+                                          builder: (alertDialogContext) {
+                                            return AlertDialog(
+                                              title: Text('送信確認'),
+                                              content:
+                                                  Text('この内容で送信します。よろしいですか？'),
+                                              actions: [
+                                                TextButton(
+                                                  onPressed: () =>
+                                                      Navigator.pop(
+                                                          alertDialogContext),
+                                                  child: Text('戻る'),
+                                                ),
+                                                TextButton(
+                                                  onPressed: () async {
+                                                    Navigator.pop(
+                                                        alertDialogContext);
+
+                                                    final contactsCreateData =
+                                                        createContactsRecordData(
+                                                      name:
+                                                          textController1.text,
+                                                      email:
+                                                          textController2.text,
+                                                      occupation:
+                                                          textController3.text,
+                                                      phone:
+                                                          textController4.text,
+                                                      subject: dropDownValue,
+                                                      message:
+                                                          textController5.text,
+                                                      check:
+                                                          checkboxListTileValue,
+                                                      timestamp:
+                                                          getCurrentTimestamp,
+                                                      to: textController2.text,
+                                                      bccUids:
+                                                          'FpgxFQOx66in7KV4LNqz',
+                                                    );
+                                                    await ContactsRecord
+                                                        .collection
+                                                        .doc()
+                                                        .set(
+                                                            contactsCreateData);
+                                                    ;
+                                                  },
+                                                  child: Text('OK'),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        );
+                                      },
+                                      text: '送信：Send',
+                                      options: FFButtonOptions(
+                                        width: 140,
+                                        height: 60,
+                                        color: Color(0xFF8B97A2),
+                                        textStyle:
+                                            FlutterFlowTheme.subtitle2.override(
+                                          fontFamily: 'Montserrat',
+                                          color: Colors.white,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                        elevation: 2,
+                                        borderSide: BorderSide(
+                                          color: Colors.transparent,
+                                          width: 2,
+                                        ),
+                                        borderRadius: 8,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(0, 80, 0, 0),
+                      child: FooterWidget(),
+                    )
+                  ],
+                ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }

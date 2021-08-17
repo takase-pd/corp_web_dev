@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pd_corp_web/home_page/home_page_widget.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'flutter_flow/flutter_flow_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Particle Drawing | ビジネスデザイン',
+      title: 'PdCorpWeb',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: HomePageWidget(),
     );
