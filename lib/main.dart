@@ -6,6 +6,7 @@ import 'package:pd_corp_web/about_page/about_page_widget.dart';
 import 'package:pd_corp_web/products_page/products_page_widget.dart';
 import 'package:pd_corp_web/contact_page/contact_page_widget.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'flutter_flow/flutter_flow_theme.dart';
 
 void main() async {
   setUrlStrategy(PathUrlStrategy());

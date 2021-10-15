@@ -2,6 +2,8 @@
 //  Generated file. Do not edit.
 //
 
+// clang-format off
+
 #import "GeneratedPluginRegistrant.h"
 
 #if __has_include(<cloud_firestore/FLTFirebaseFirestorePlugin.h>)
@@ -16,10 +18,10 @@
 @import firebase_core;
 #endif
 
-#if __has_include(<geolocator/GeolocatorPlugin.h>)
-#import <geolocator/GeolocatorPlugin.h>
+#if __has_include(<geolocator_apple/GeolocatorPlugin.h>)
+#import <geolocator_apple/GeolocatorPlugin.h>
 #else
-@import geolocator;
+@import geolocator_apple;
 #endif
 
 #if __has_include(<path_provider/FLTPathProviderPlugin.h>)
