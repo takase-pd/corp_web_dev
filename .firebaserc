@@ -1,5 +1,21 @@
 {
   "projects": {
     "default": "corp-web-dev-3295d"
+  },
+  "targets": {
+    "corp-web-dev-3295d": {
+      "hosting": {
+        "prod": [
+          "corp-web-dev-3295d"
+        ]
+      }
+    },
+    "corp-web-dev-3295d": {
+      "hosting": {
+        "dev": [
+          "pd-corp-dev"
+        ]
+      }
+    }
   }
 }

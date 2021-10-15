@@ -24,3 +24,5 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CORP_WEB_DEV_3295D }}'
           projectId: corp-web-dev-3295d
+          target: prod
+
