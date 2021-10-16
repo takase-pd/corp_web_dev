@@ -5,15 +5,11 @@
   "targets": {
     "corp-web-dev-3295d": {
       "hosting": {
-        "prod": [
-          "corp-web-dev-3295d"
-        ]
-      }
-    },
-    "corp-web-dev-3295d": {
-      "hosting": {
         "dev": [
           "pd-corp-dev"
+        ],
+        "prod": [
+          "corp-wev-dev-3295d"
         ]
       }
     }
