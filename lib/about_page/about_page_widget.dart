@@ -59,7 +59,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                       'About',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.title1.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Open Sans',
                         fontSize: 36,
                       ),
                     ),

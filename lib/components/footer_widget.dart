@@ -50,7 +50,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                           child: Text(
                             'Home',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Open Sans',
                               color: Colors.white,
                             ),
                           ),
@@ -65,7 +65,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                           child: Text(
                             'About',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Open Sans',
                               color: Colors.white,
                               fontWeight: FontWeight.normal,
                             ),
@@ -81,7 +81,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                           child: Text(
                             'Products',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Open Sans',
                               color: Colors.white,
                             ),
                           ),
@@ -105,7 +105,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                           child: Text(
                             'Privacy Policy',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Open Sans',
                               color: Colors.white,
                             ),
                           ),
@@ -120,7 +120,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                           child: Text(
                             'Contact',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Open Sans',
                               color: Colors.white,
                             ),
                           ),
@@ -134,7 +134,7 @@ class _FooterWidgetState extends State<FooterWidget> {
             Text(
               'Copyright © 2021 Particle Drawing G.K. All rights reserved',
               style: FlutterFlowTheme.subtitle2.override(
-                fontFamily: 'Poppins',
+                fontFamily: 'Open Sans',
                 color: Color(0xFFDCDCDC),
                 fontSize: 10,
               ),

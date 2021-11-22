@@ -72,7 +72,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                         'Contact',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.title1.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Open Sans',
                           fontSize: 36,
                         ),
                       ),

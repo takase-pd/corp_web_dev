@@ -60,7 +60,7 @@ class _PrivacyPolicyPageWidgetState extends State<PrivacyPolicyPageWidget> {
                       '個人情報保護方針',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.title1.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Open Sans',
                         fontSize: 36,
                       ),
                     ),

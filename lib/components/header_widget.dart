@@ -40,7 +40,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       child: Text(
                         'Particle Drawing',
                         style: FlutterFlowTheme.title2.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Open Sans',
                           fontSize: 18,
                         ),
                       ),
@@ -48,7 +48,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                     Text(
                       'a Design Driven Company',
                       style: FlutterFlowTheme.subtitle1.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Open Sans',
                         fontSize: 12,
                       ),
                     )
@@ -76,7 +76,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                   child: Text(
                     'Home',
                     style: FlutterFlowTheme.subtitle2.override(
-                      fontFamily: 'Poppins',
+                      fontFamily: 'Open Sans',
                       fontWeight: FontWeight.normal,
                     ),
                   ),
