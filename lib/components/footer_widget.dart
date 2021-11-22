@@ -25,7 +25,7 @@ class _FooterWidgetState extends State<FooterWidget> {
         color: Color(0xFF565656),
       ),
       child: Padding(
-        padding: EdgeInsets.fromLTRB(30, 30, 20, 20),
+        padding: EdgeInsetsDirectional.fromSTEB(30, 30, 20, 20),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,13 +36,13 @@ class _FooterWidgetState extends State<FooterWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 50, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 50, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
                             await Navigator.pushNamed(context, '/');
@@ -57,7 +57,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
                             await Navigator.pushNamed(context, '/about');
@@ -73,7 +73,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
                             await Navigator.pushNamed(context, '/products');
@@ -91,13 +91,13 @@ class _FooterWidgetState extends State<FooterWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 50, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 50, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
                             await Navigator.pushNamed(context, '/privacy');
@@ -112,7 +112,7 @@ class _FooterWidgetState extends State<FooterWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
                             await Navigator.pushNamed(context, '/contact');

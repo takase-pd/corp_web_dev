@@ -35,17 +35,17 @@ class _$ContactsRecordSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.phone;
-    if (value != null) {
-      result
-        ..add('phone')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
     value = object.occupation;
     if (value != null) {
       result
         ..add('occupation')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.phone;
+    if (value != null) {
+      result
+        ..add('phone')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
@@ -77,12 +77,27 @@ class _$ContactsRecordSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(DateTime)));
     }
+    value = object.to;
+    if (value != null) {
+      result
+        ..add('to')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.bccUids;
+    if (value != null) {
+      result
+        ..add('bccUids')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
     value = object.reference;
     if (value != null) {
       result
         ..add('Document__Reference__Field')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(DocumentReference)));
+            specifiedType: const FullType(
+                DocumentReference, const [const FullType(Object)])));
     }
     return result;
   }
@@ -107,12 +122,12 @@ class _$ContactsRecordSerializer
           result.email = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'occupation':
           result.occupation = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'phone':
+          result.phone = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
         case 'subject':
@@ -131,10 +146,19 @@ class _$ContactsRecordSerializer
           result.timestamp = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'to':
+          result.to = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'bccUids':
+          result.bccUids = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'Document__Reference__Field':
           result.reference = serializers.deserialize(value,
-                  specifiedType: const FullType(DocumentReference))
-              as DocumentReference;
+                  specifiedType: const FullType(
+                      DocumentReference, const [const FullType(Object)]))
+              as DocumentReference<Object>;
           break;
       }
     }
@@ -149,9 +173,9 @@ class _$ContactsRecord extends ContactsRecord {
   @override
   final String email;
   @override
-  final String phone;
-  @override
   final String occupation;
+  @override
+  final String phone;
   @override
   final String subject;
   @override
@@ -161,7 +185,11 @@ class _$ContactsRecord extends ContactsRecord {
   @override
   final DateTime timestamp;
   @override
-  final DocumentReference reference;
+  final String to;
+  @override
+  final String bccUids;
+  @override
+  final DocumentReference<Object> reference;
 
   factory _$ContactsRecord([void Function(ContactsRecordBuilder) updates]) =>
       (new ContactsRecordBuilder()..update(updates)).build();
@@ -169,12 +197,14 @@ class _$ContactsRecord extends ContactsRecord {
   _$ContactsRecord._(
       {this.name,
       this.email,
-      this.phone,
       this.occupation,
+      this.phone,
       this.subject,
       this.message,
       this.check,
       this.timestamp,
+      this.to,
+      this.bccUids,
       this.reference})
       : super._();
 
@@ -192,12 +222,14 @@ class _$ContactsRecord extends ContactsRecord {
     return other is ContactsRecord &&
         name == other.name &&
         email == other.email &&
-        phone == other.phone &&
         occupation == other.occupation &&
+        phone == other.phone &&
         subject == other.subject &&
         message == other.message &&
         check == other.check &&
         timestamp == other.timestamp &&
+        to == other.to &&
+        bccUids == other.bccUids &&
         reference == other.reference;
   }
 
@@ -209,13 +241,19 @@ class _$ContactsRecord extends ContactsRecord {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc($jc(0, name.hashCode), email.hashCode),
-                                phone.hashCode),
-                            occupation.hashCode),
-                        subject.hashCode),
-                    message.hashCode),
-                check.hashCode),
-            timestamp.hashCode),
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, name.hashCode),
+                                            email.hashCode),
+                                        occupation.hashCode),
+                                    phone.hashCode),
+                                subject.hashCode),
+                            message.hashCode),
+                        check.hashCode),
+                    timestamp.hashCode),
+                to.hashCode),
+            bccUids.hashCode),
         reference.hashCode));
   }
 
@@ -224,12 +262,14 @@ class _$ContactsRecord extends ContactsRecord {
     return (newBuiltValueToStringHelper('ContactsRecord')
           ..add('name', name)
           ..add('email', email)
-          ..add('phone', phone)
           ..add('occupation', occupation)
+          ..add('phone', phone)
           ..add('subject', subject)
           ..add('message', message)
           ..add('check', check)
           ..add('timestamp', timestamp)
+          ..add('to', to)
+          ..add('bccUids', bccUids)
           ..add('reference', reference))
         .toString();
   }
@@ -247,13 +287,13 @@ class ContactsRecordBuilder
   String get email => _$this._email;
   set email(String email) => _$this._email = email;
 
-  String _phone;
-  String get phone => _$this._phone;
-  set phone(String phone) => _$this._phone = phone;
-
   String _occupation;
   String get occupation => _$this._occupation;
   set occupation(String occupation) => _$this._occupation = occupation;
+
+  String _phone;
+  String get phone => _$this._phone;
+  set phone(String phone) => _$this._phone = phone;
 
   String _subject;
   String get subject => _$this._subject;
@@ -271,9 +311,18 @@ class ContactsRecordBuilder
   DateTime get timestamp => _$this._timestamp;
   set timestamp(DateTime timestamp) => _$this._timestamp = timestamp;
 
-  DocumentReference _reference;
-  DocumentReference get reference => _$this._reference;
-  set reference(DocumentReference reference) => _$this._reference = reference;
+  String _to;
+  String get to => _$this._to;
+  set to(String to) => _$this._to = to;
+
+  String _bccUids;
+  String get bccUids => _$this._bccUids;
+  set bccUids(String bccUids) => _$this._bccUids = bccUids;
+
+  DocumentReference<Object> _reference;
+  DocumentReference<Object> get reference => _$this._reference;
+  set reference(DocumentReference<Object> reference) =>
+      _$this._reference = reference;
 
   ContactsRecordBuilder() {
     ContactsRecord._initializeBuilder(this);
@@ -284,12 +333,14 @@ class ContactsRecordBuilder
     if ($v != null) {
       _name = $v.name;
       _email = $v.email;
-      _phone = $v.phone;
       _occupation = $v.occupation;
+      _phone = $v.phone;
       _subject = $v.subject;
       _message = $v.message;
       _check = $v.check;
       _timestamp = $v.timestamp;
+      _to = $v.to;
+      _bccUids = $v.bccUids;
       _reference = $v.reference;
       _$v = null;
     }
@@ -313,16 +364,18 @@ class ContactsRecordBuilder
         new _$ContactsRecord._(
             name: name,
             email: email,
-            phone: phone,
             occupation: occupation,
+            phone: phone,
             subject: subject,
             message: message,
             check: check,
             timestamp: timestamp,
+            to: to,
+            bccUids: bccUids,
             reference: reference);
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new

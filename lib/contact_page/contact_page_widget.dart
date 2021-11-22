@@ -1,7 +1,7 @@
 import '../backend/backend.dart';
 import '../components/footer_widget.dart';
 import '../components/header_widget.dart';
-import '../flutter_flow/flutter_flow_drop_down_template.dart';
+import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -26,6 +26,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
   TextEditingController textController4;
   TextEditingController textController5;
   bool checkboxListTileValue;
+  bool _loadingButton = false;
   final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -66,7 +67,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                   children: [
                     HeaderWidget(),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(0, 30, 0, 20),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 20),
                       child: Text(
                         'Contact',
                         textAlign: TextAlign.center,
@@ -77,7 +78,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                       ),
                     ),
                     Stack(
-                      alignment: Alignment(0, 0),
+                      alignment: AlignmentDirectional(0, 0),
                       children: [
                         CachedNetworkImage(
                           imageUrl:
@@ -89,13 +90,14 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                       ],
                     ),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -103,12 +105,11 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                               children: [
                                 Text(
                                   'Particle Drawingへの案件・プロジェクトのご相談や、採用、その他のお問い合わせは、以下のフォームからご連絡ください。担当者からご返信を差し上げます。',
-                                  style: FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                  ),
+                                  style: FlutterFlowTheme.bodyText1,
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 12, 0, 0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -125,8 +126,9 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.fromLTRB(
-                                                16, 0, 0, 0),
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
                                             child: TextFormField(
                                               controller: textController1,
                                               obscureText: false,
@@ -191,7 +193,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 12, 0, 0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -208,8 +211,9 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.fromLTRB(
-                                                16, 0, 0, 0),
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
                                             child: TextFormField(
                                               controller: textController2,
                                               obscureText: false,
@@ -274,7 +278,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 12, 0, 0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -291,8 +296,9 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.fromLTRB(
-                                                16, 0, 0, 0),
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
                                             child: TextFormField(
                                               controller: textController3,
                                               obscureText: false,
@@ -348,7 +354,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 12, 0, 0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -365,8 +372,9 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.fromLTRB(
-                                                16, 0, 0, 0),
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
                                             child: TextFormField(
                                               controller: textController4,
                                               obscureText: false,
@@ -423,7 +431,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 12, 0, 0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -440,18 +449,17 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.fromLTRB(
-                                                16, 0, 0, 0),
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
                                             child: FlutterFlowDropDown(
                                               options: [
                                                 '案件・プロジェクト：New Business',
                                                 '採用・インターン：Careers',
                                                 'その他'
-                                              ],
-                                              onChanged: (value) {
-                                                setState(() =>
-                                                    dropDownValue = value);
-                                              },
+                                              ].toList(),
+                                              onChanged: (val) => setState(
+                                                  () => dropDownValue = val),
                                               width: 130,
                                               height: 40,
                                               textStyle: FlutterFlowTheme
@@ -466,8 +474,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                               borderColor: Colors.transparent,
                                               borderWidth: 0,
                                               borderRadius: 0,
-                                              margin: EdgeInsets.fromLTRB(
-                                                  8, 4, 8, 4),
+                                              margin: EdgeInsetsDirectional
+                                                  .fromSTEB(8, 4, 8, 4),
                                             ),
                                           ),
                                         ),
@@ -476,7 +484,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 12, 0, 0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -493,8 +502,9 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.fromLTRB(
-                                                16, 0, 0, 0),
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16, 0, 0, 0),
                                             child: TextFormField(
                                               controller: textController5,
                                               obscureText: false,
@@ -560,7 +570,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 16, 0, 0),
                                   child: InkWell(
                                     onTap: () async {
                                       await Navigator.push(
@@ -573,10 +584,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                     },
                                     child: Text(
                                       '※入力いただいた情報は個人情報保護方針に則り管理いたします。',
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Poppins',
-                                      ),
+                                      style: FlutterFlowTheme.bodyText1,
                                     ),
                                   ),
                                 ),
@@ -587,9 +595,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                   title: Text(
                                     '上記内容に同意',
                                     textAlign: TextAlign.start,
-                                    style: FlutterFlowTheme.bodyText2.override(
-                                      fontFamily: 'Poppins',
-                                    ),
+                                    style: FlutterFlowTheme.bodyText2,
                                   ),
                                   tileColor: Color(0x00FFFFFF),
                                   dense: false,
@@ -597,67 +603,77 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                       ListTileControlAffinity.trailing,
                                 ),
                                 Align(
-                                  alignment: Alignment(0.95, 0),
+                                  alignment: AlignmentDirectional(0.95, 0),
                                   child: Padding(
-                                    padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 16, 0, 0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        if (!formKey.currentState.validate()) {
-                                          return;
-                                        }
-                                        await showDialog(
-                                          context: context,
-                                          builder: (alertDialogContext) {
-                                            return AlertDialog(
-                                              title: Text('送信確認'),
-                                              content:
-                                                  Text('この内容で送信します。よろしいですか？'),
-                                              actions: [
-                                                TextButton(
-                                                  onPressed: () =>
+                                        setState(() => _loadingButton = true);
+                                        try {
+                                          if (!formKey.currentState
+                                              .validate()) {
+                                            return;
+                                          }
+                                          await showDialog(
+                                            context: context,
+                                            builder: (alertDialogContext) {
+                                              return AlertDialog(
+                                                title: Text('送信確認'),
+                                                content:
+                                                    Text('この内容で送信します。よろしいですか？'),
+                                                actions: [
+                                                  TextButton(
+                                                    onPressed: () =>
+                                                        Navigator.pop(
+                                                            alertDialogContext),
+                                                    child: Text('戻る'),
+                                                  ),
+                                                  TextButton(
+                                                    onPressed: () async {
                                                       Navigator.pop(
-                                                          alertDialogContext),
-                                                  child: Text('戻る'),
-                                                ),
-                                                TextButton(
-                                                  onPressed: () async {
-                                                    Navigator.pop(
-                                                        alertDialogContext);
+                                                          alertDialogContext);
 
-                                                    final contactsCreateData =
-                                                        createContactsRecordData(
-                                                      name:
-                                                          textController1.text,
-                                                      email:
-                                                          textController2.text,
-                                                      occupation:
-                                                          textController3.text,
-                                                      phone:
-                                                          textController4.text,
-                                                      subject: dropDownValue,
-                                                      message:
-                                                          textController5.text,
-                                                      check:
-                                                          checkboxListTileValue,
-                                                      timestamp:
-                                                          getCurrentTimestamp,
-                                                      to: textController2.text,
-                                                      bccUids:
-                                                          'FpgxFQOx66in7KV4LNqz',
-                                                    );
-                                                    await ContactsRecord
-                                                        .collection
-                                                        .doc()
-                                                        .set(
-                                                            contactsCreateData);
-                                                    ;
-                                                  },
-                                                  child: Text('OK'),
-                                                ),
-                                              ],
-                                            );
-                                          },
-                                        );
+                                                      final contactsCreateData =
+                                                          createContactsRecordData(
+                                                        name: textController1
+                                                            .text,
+                                                        email: textController2
+                                                            .text,
+                                                        occupation:
+                                                            textController3
+                                                                .text,
+                                                        phone: textController4
+                                                            .text,
+                                                        subject: dropDownValue,
+                                                        message: textController5
+                                                            .text,
+                                                        check:
+                                                            checkboxListTileValue,
+                                                        timestamp:
+                                                            getCurrentTimestamp,
+                                                        to: textController2
+                                                            .text,
+                                                        bccUids:
+                                                            'FpgxFQOx66in7KV4LNqz',
+                                                      );
+                                                      await ContactsRecord
+                                                          .collection
+                                                          .doc()
+                                                          .set(
+                                                              contactsCreateData);
+                                                      ;
+                                                    },
+                                                    child: Text('OK'),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        } finally {
+                                          setState(
+                                              () => _loadingButton = false);
+                                        }
                                       },
                                       text: '送信：Send',
                                       options: FFButtonOptions(
@@ -678,6 +694,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                         ),
                                         borderRadius: 8,
                                       ),
+                                      loading: _loadingButton,
                                     ),
                                   ),
                                 )
@@ -688,7 +705,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(0, 80, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
                       child: FooterWidget(),
                     )
                   ],

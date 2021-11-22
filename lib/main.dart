@@ -1,5 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:pd_corp_web/home_page/home_page_widget.dart';
 import 'package:pd_corp_web/privacy_policy_page/privacy_policy_page_widget.dart';
 import 'package:pd_corp_web/about_page/about_page_widget.dart';
