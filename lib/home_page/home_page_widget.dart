@@ -54,7 +54,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 children: [
                   HeaderWidget(),
                   Stack(
-                    alignment: Alignment(0, 0),
+                    alignment: AlignmentDirectional(0, 0),
                     children: [
                       CachedNetworkImage(
                         imageUrl: 'https://picsum.photos/id/621/2300/1533',
@@ -62,16 +62,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         height: 600,
                         fit: BoxFit.cover,
                       ),
-                      Align(
-                        alignment: Alignment(0, 0),
-                        child: Text(
-                          'Create a culture that celebrates the repetition of creation, experimentation and failure.',
-                          textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.title1.override(
-                            fontFamily: 'Poppins',
-                            color: Colors.white,
-                            fontSize: 32,
-                          ),
+                      Text(
+                        'Create a culture that celebrates the repetition of creation, experimentation and failure.',
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Open Sans',
+                          color: Colors.white,
+                          fontSize: 32,
+                          fontWeight: FontWeight.w600,
                         ),
                       )
                     ],
