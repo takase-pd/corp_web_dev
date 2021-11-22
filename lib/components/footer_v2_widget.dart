@@ -3,25 +3,24 @@ import '../contact_page/contact_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../home_page/home_page_widget.dart';
-import '../home_page_copy/home_page_copy_widget.dart';
 import '../privacy_policy_page/privacy_policy_page_widget.dart';
 import '../products_page/products_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FooterWidget extends StatefulWidget {
-  FooterWidget({Key key}) : super(key: key);
+class FooterV2Widget extends StatefulWidget {
+  FooterV2Widget({Key key}) : super(key: key);
 
   @override
-  _FooterWidgetState createState() => _FooterWidgetState();
+  _FooterV2WidgetState createState() => _FooterV2WidgetState();
 }
 
-class _FooterWidgetState extends State<FooterWidget> {
+class _FooterV2WidgetState extends State<FooterV2Widget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
-      height: 300,
+      width: double.infinity,
+      height: 320,
       constraints: BoxConstraints(
         maxWidth: 1000,
       ),
@@ -154,26 +153,6 @@ class _FooterWidgetState extends State<FooterWidget> {
                             ),
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                        child: InkWell(
-                          onTap: () async {
-                            await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomePageCopyWidget(),
-                              ),
-                            );
-                          },
-                          child: Text(
-                            'Test',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Open Sans',
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
                       )
                     ],
                   ),
@@ -181,7 +160,7 @@ class _FooterWidgetState extends State<FooterWidget> {
               ],
             ),
             Text(
-              'Copyright © 2021 Particle Drawing G.K. All rights reserved',
+              'Copyright © 2021 Particle Drawing, LLC. All rights reserved.',
               style: FlutterFlowTheme.subtitle2.override(
                 fontFamily: 'Open Sans',
                 color: Color(0xFFDCDCDC),
