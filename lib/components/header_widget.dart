@@ -26,7 +26,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
             color: Color(0xFFEEEEEE),
           ),
           child: Padding(
-            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -36,7 +36,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                       child: Text(
                         'Particle Drawing',
                         style: FlutterFlowTheme.title2.override(
@@ -59,13 +59,13 @@ class _HeaderWidgetState extends State<HeaderWidget> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.fromLTRB(0, 10, 0, 20),
+          padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 20),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Padding(
-                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
                 child: InkWell(
                   onTap: () async {
                     await Navigator.push(
@@ -85,7 +85,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
                 child: InkWell(
                   onTap: () async {
                     await Navigator.push(
@@ -97,14 +97,12 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                   },
                   child: Text(
                     'About',
-                    style: FlutterFlowTheme.subtitle2.override(
-                      fontFamily: 'Poppins',
-                    ),
+                    style: FlutterFlowTheme.subtitle2,
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
                 child: InkWell(
                   onTap: () async {
                     await Navigator.push(
@@ -116,9 +114,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                   },
                   child: Text(
                     'Products',
-                    style: FlutterFlowTheme.subtitle2.override(
-                      fontFamily: 'Poppins',
-                    ),
+                    style: FlutterFlowTheme.subtitle2,
                   ),
                 ),
               )

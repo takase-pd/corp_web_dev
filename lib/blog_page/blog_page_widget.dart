@@ -3,18 +3,18 @@ import '../components/header_widget.dart';
 import '../contact_page/contact_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+import '../flutter_flow/flutter_flow_web_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ProductsPageWidget extends StatefulWidget {
-  ProductsPageWidget({Key key}) : super(key: key);
+class BlogPageWidget extends StatefulWidget {
+  BlogPageWidget({Key key}) : super(key: key);
 
   @override
-  _ProductsPageWidgetState createState() => _ProductsPageWidgetState();
+  _BlogPageWidgetState createState() => _BlogPageWidgetState();
 }
 
-class _ProductsPageWidgetState extends State<ProductsPageWidget> {
+class _BlogPageWidgetState extends State<BlogPageWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -61,7 +61,7 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 20),
                     child: Text(
-                      'Products',
+                      'Blog',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.title1.override(
                         fontFamily: 'Poppins',
@@ -69,32 +69,13 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
                       ),
                     ),
                   ),
-                  Stack(
-                    alignment: AlignmentDirectional(0, 0),
-                    children: [
-                      CachedNetworkImage(
-                        imageUrl: 'https://picsum.photos/id/400/5184/3456',
-                        width: double.infinity,
-                        height: 500,
-                        fit: BoxFit.cover,
-                      )
-                    ],
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                          child: Text(
-                            'Under construction.',
-                            style: FlutterFlowTheme.bodyText1,
-                          ),
-                        )
-                      ],
-                    ),
+                  FlutterFlowWebView(
+                    url:
+                        'https://particledrawing.notion.site/Blog-e77c3ad46598475bbd94dcd842fba995',
+                    bypass: false,
+                    height: MediaQuery.of(context).size.height * 0.5,
+                    verticalScroll: false,
+                    horizontalScroll: false,
                   ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
