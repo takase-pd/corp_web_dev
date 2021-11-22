@@ -3,6 +3,7 @@ import '../components/header_widget.dart';
 import '../contact_page/contact_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -57,6 +58,27 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   HeaderWidget(),
+                  Stack(
+                    alignment: AlignmentDirectional(0, 0),
+                    children: [
+                      CachedNetworkImage(
+                        imageUrl: 'https://picsum.photos/id/621/2300/1533',
+                        width: double.infinity,
+                        height: 600,
+                        fit: BoxFit.cover,
+                      ),
+                      Text(
+                        'Create a culture that celebrates the repetition of creation, experimentation and failure.',
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.bodyText1.override(
+                          fontFamily: 'Open Sans',
+                          color: Colors.white,
+                          fontSize: 32,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      )
+                    ],
+                  ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                     child: Column(
