@@ -6,7 +6,6 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../privacy_policy_page/privacy_policy_page_widget.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -81,9 +80,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                       Stack(
                         alignment: AlignmentDirectional(0, 0),
                         children: [
-                          CachedNetworkImage(
-                            imageUrl:
-                                'https://i.picsum.photos/id/852/3212/2409.jpg?hmac=9Dl4bKeO56pailgEulSkve2oLtehgdPwfcx8JQzpMro',
+                          Image.network(
+                            'https://i.picsum.photos/id/852/3212/2409.jpg?hmac=9Dl4bKeO56pailgEulSkve2oLtehgdPwfcx8JQzpMro',
                             width: double.infinity,
                             height: 500,
                             fit: BoxFit.cover,
