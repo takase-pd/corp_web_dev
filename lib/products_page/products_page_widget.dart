@@ -1,5 +1,5 @@
-import '../components/footer_widget.dart';
-import '../components/header_widget.dart';
+import '../components/footer_v2_widget.dart';
+import '../components/header_v2_widget.dart';
 import '../contact_page/contact_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -33,73 +33,79 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
           size: 24,
         ),
       ),
-      body: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 1,
-            constraints: BoxConstraints(
-              maxWidth: 1000,
-            ),
-            decoration: BoxDecoration(
-              color: Color(0x00FFFFFF),
-            ),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  HeaderWidget(),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 20),
-                    child: Text(
-                      'Products',
-                      textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.title1.override(
-                        fontFamily: 'Open Sans',
-                        fontSize: 36,
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              HeaderV2Widget(),
+              Container(
+                width: double.infinity,
+                constraints: BoxConstraints(
+                  maxWidth: 1000,
+                ),
+                decoration: BoxDecoration(),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 20),
+                      child: Text(
+                        'Products',
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.title1.override(
+                          fontFamily: 'Open Sans',
+                          fontSize: 36,
+                        ),
                       ),
                     ),
-                  ),
-                  Stack(
-                    alignment: AlignmentDirectional(0, 0),
+                    Stack(
+                      alignment: AlignmentDirectional(0, 0),
+                      children: [
+                        CachedNetworkImage(
+                          imageUrl: 'https://picsum.photos/id/400/5184/3456',
+                          width: double.infinity,
+                          height: 500,
+                          fit: BoxFit.cover,
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                constraints: BoxConstraints(
+                  maxWidth: 1000,
+                ),
+                decoration: BoxDecoration(),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      CachedNetworkImage(
-                        imageUrl: 'https://picsum.photos/id/400/5184/3456',
-                        width: double.infinity,
-                        height: 500,
-                        fit: BoxFit.cover,
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        child: Text(
+                          'Under construction.',
+                          style: FlutterFlowTheme.bodyText1,
+                        ),
                       )
                     ],
                   ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                          child: Text(
-                            'Under construction.',
-                            style: FlutterFlowTheme.bodyText1,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
-                    child: FooterWidget(),
-                  )
-                ],
+                ),
               ),
-            ),
-          )
-        ],
+              FooterV2Widget()
+            ],
+          ),
+        ),
       ),
     );
   }
