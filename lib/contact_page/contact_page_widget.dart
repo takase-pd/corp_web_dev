@@ -101,15 +101,15 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
                           padding:
                               EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'Particle Drawingへの案件・プロジェクトのご相談や、採用、その他のお問い合わせは、以下のフォームからご連絡ください。担当者からご返信を差し上げます。',
@@ -596,7 +596,6 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                   textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.bodyText2,
                                 ),
-                                tileColor: Color(0x00FFFFFF),
                                 dense: false,
                                 controlAffinity:
                                     ListTileControlAffinity.trailing,
