@@ -53,12 +53,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 child: Stack(
                   alignment: AlignmentDirectional(0, 0),
                   children: [
-                    Image.network(
-                      'https://picsum.photos/id/621/2300/1533',
-                      width: double.infinity,
-                      height: 600,
-                      fit: BoxFit.cover,
-                    ),
+                    // Image.network(
+                    //   'https://picsum.photos/id/621/2300/1533',
+                    //   width: double.infinity,
+                    //   height: 600,
+                    //   fit: BoxFit.cover,
+                    // ),
                     Text(
                       'Create a culture that celebrates the repetition of creation, experimentation and failure.',
                       textAlign: TextAlign.center,

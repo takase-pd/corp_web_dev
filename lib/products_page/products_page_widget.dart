@@ -64,17 +64,17 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
                         ),
                       ),
                     ),
-                    Stack(
-                      alignment: AlignmentDirectional(0, 0),
-                      children: [
-                        Image.network(
-                          'https://picsum.photos/id/400/5184/3456',
-                          width: double.infinity,
-                          height: 500,
-                          fit: BoxFit.cover,
-                        )
-                      ],
-                    )
+                    // Stack(
+                    //   alignment: AlignmentDirectional(0, 0),
+                    //   children: [
+                    //     Image.network(
+                    //       'https://picsum.photos/id/400/5184/3456',
+                    //       width: double.infinity,
+                    //       height: 500,
+                    //       fit: BoxFit.cover,
+                    //     )
+                    //   ],
+                    // )
                   ],
                 ),
               ),
