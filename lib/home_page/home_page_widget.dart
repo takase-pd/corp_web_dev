@@ -3,7 +3,6 @@ import '../components/header_v2_widget.dart';
 import '../contact_page/contact_page_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -54,8 +53,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 child: Stack(
                   alignment: AlignmentDirectional(0, 0),
                   children: [
-                    CachedNetworkImage(
-                      imageUrl: 'https://picsum.photos/id/621/2300/1533',
+                    Image.network(
+                      'https://picsum.photos/id/621/2300/1533',
                       width: double.infinity,
                       height: 600,
                       fit: BoxFit.cover,

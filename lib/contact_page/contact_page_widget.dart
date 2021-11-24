@@ -6,7 +6,6 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../privacy_policy_page/privacy_policy_page_widget.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -81,9 +80,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                       Stack(
                         alignment: AlignmentDirectional(0, 0),
                         children: [
-                          CachedNetworkImage(
-                            imageUrl:
-                                'https://i.picsum.photos/id/852/3212/2409.jpg?hmac=9Dl4bKeO56pailgEulSkve2oLtehgdPwfcx8JQzpMro',
+                          Image.network(
+                            'https://i.picsum.photos/id/852/3212/2409.jpg?hmac=9Dl4bKeO56pailgEulSkve2oLtehgdPwfcx8JQzpMro',
                             width: double.infinity,
                             height: 500,
                             fit: BoxFit.cover,
@@ -103,15 +101,15 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
                           padding:
                               EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'Particle Drawingへの案件・プロジェクトのご相談や、採用、その他のお問い合わせは、以下のフォームからご連絡ください。担当者からご返信を差し上げます。',
@@ -598,7 +596,6 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                   textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.bodyText2,
                                 ),
-                                tileColor: Color(0x00FFFFFF),
                                 dense: false,
                                 controlAffinity:
                                     ListTileControlAffinity.trailing,
