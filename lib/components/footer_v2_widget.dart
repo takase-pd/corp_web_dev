@@ -8,24 +8,27 @@ import '../products_page/products_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FooterWidget extends StatefulWidget {
-  FooterWidget({Key key}) : super(key: key);
+class FooterV2Widget extends StatefulWidget {
+  FooterV2Widget({Key key}) : super(key: key);
 
   @override
-  _FooterWidgetState createState() => _FooterWidgetState();
+  _FooterV2WidgetState createState() => _FooterV2WidgetState();
 }
 
-class _FooterWidgetState extends State<FooterWidget> {
+class _FooterV2WidgetState extends State<FooterV2Widget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
-      height: 300,
+      width: double.infinity,
+      height: 320,
+      constraints: BoxConstraints(
+        maxWidth: 1000,
+      ),
       decoration: BoxDecoration(
         color: Color(0xFF565656),
       ),
       child: Padding(
-        padding: EdgeInsets.fromLTRB(30, 30, 20, 20),
+        padding: EdgeInsetsDirectional.fromSTEB(30, 30, 20, 20),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,36 +39,46 @@ class _FooterWidgetState extends State<FooterWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 50, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 50, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
-                            await Navigator.pushNamed(context, '/');
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePageWidget(),
+                              ),
+                            );
                           },
                           child: Text(
                             'Home',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Open Sans',
                               color: Colors.white,
                             ),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
-                            await Navigator.pushNamed(context, '/about');
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AboutPageWidget(),
+                              ),
+                            );
                           },
                           child: Text(
                             'About',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Open Sans',
                               color: Colors.white,
                               fontWeight: FontWeight.normal,
                             ),
@@ -73,15 +86,20 @@ class _FooterWidgetState extends State<FooterWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
-                            await Navigator.pushNamed(context, '/products');
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProductsPageWidget(),
+                              ),
+                            );
                           },
                           child: Text(
                             'Products',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Open Sans',
                               color: Colors.white,
                             ),
                           ),
@@ -91,36 +109,46 @@ class _FooterWidgetState extends State<FooterWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 50, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 50, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
-                            await Navigator.pushNamed(context, '/privacy');
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PrivacyPolicyPageWidget(),
+                              ),
+                            );
                           },
                           child: Text(
                             'Privacy Policy',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Open Sans',
                               color: Colors.white,
                             ),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: InkWell(
                           onTap: () async {
-                            await Navigator.pushNamed(context, '/contact');
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ContactPageWidget(),
+                              ),
+                            );
                           },
                           child: Text(
                             'Contact',
                             style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Open Sans',
                               color: Colors.white,
                             ),
                           ),
@@ -132,9 +160,9 @@ class _FooterWidgetState extends State<FooterWidget> {
               ],
             ),
             Text(
-              'Copyright © 2021 Particle Drawing G.K. All rights reserved',
+              'Copyright © 2021 Particle Drawing, LLC. All rights reserved.',
               style: FlutterFlowTheme.subtitle2.override(
-                fontFamily: 'Poppins',
+                fontFamily: 'Open Sans',
                 color: Color(0xFFDCDCDC),
                 fontSize: 10,
               ),
