@@ -64,17 +64,17 @@ class _PrivacyPolicyPageWidgetState extends State<PrivacyPolicyPageWidget> {
                         ),
                       ),
                     ),
-                    // Stack(
-                    //   alignment: AlignmentDirectional(0, 0),
-                    //   children: [
-                    //     Image.network(
-                    //       'https://picsum.photos/id/444/4288/2848',
-                    //       width: double.infinity,
-                    //       height: 500,
-                    //       fit: BoxFit.cover,
-                    //     )
-                    //   ],
-                    // )
+                    Stack(
+                      alignment: AlignmentDirectional(0, 0),
+                      children: [
+                        Image.network(
+                          'https://picsum.photos/id/444/4288/2848',
+                          width: double.infinity,
+                          height: 500,
+                          fit: BoxFit.cover,
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),

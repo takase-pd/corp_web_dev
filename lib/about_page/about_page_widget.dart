@@ -64,17 +64,17 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         ),
                       ),
                     ),
-                    // Stack(
-                    //   alignment: AlignmentDirectional(0, 0),
-                    //   children: [
-                    //     Image.network(
-                    //       'https://picsum.photos/id/625/2507/1674',
-                    //       width: double.infinity,
-                    //       height: 500,
-                    //       fit: BoxFit.cover,
-                    //     )
-                    //   ],
-                    // )
+                    Stack(
+                      alignment: AlignmentDirectional(0, 0),
+                      children: [
+                        Image.network(
+                          'https://picsum.photos/id/625/2507/1674',
+                          width: double.infinity,
+                          height: 500,
+                          fit: BoxFit.cover,
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),

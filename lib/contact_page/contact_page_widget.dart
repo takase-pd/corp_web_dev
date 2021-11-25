@@ -77,17 +77,17 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                           ),
                         ),
                       ),
-                      // Stack(
-                      //   alignment: AlignmentDirectional(0, 0),
-                      //   children: [
-                      //     Image.network(
-                      //       'https://i.picsum.photos/id/852/3212/2409.jpg?hmac=9Dl4bKeO56pailgEulSkve2oLtehgdPwfcx8JQzpMro',
-                      //       width: double.infinity,
-                      //       height: 500,
-                      //       fit: BoxFit.cover,
-                      //     )
-                      //   ],
-                      // )
+                      Stack(
+                        alignment: AlignmentDirectional(0, 0),
+                        children: [
+                          Image.network(
+                            'https://i.picsum.photos/id/852/3212/2409.jpg?hmac=9Dl4bKeO56pailgEulSkve2oLtehgdPwfcx8JQzpMro',
+                            width: double.infinity,
+                            height: 500,
+                            fit: BoxFit.cover,
+                          )
+                        ],
+                      )
                     ],
                   ),
                 ),
