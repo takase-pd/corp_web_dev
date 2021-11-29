@@ -1,4 +1,4 @@
-import '../backend/backend.dart';
+import '../backend/api_requests/api_calls.dart';
 import '../components/footer_v2_widget.dart';
 import '../components/header_v2_widget.dart';
 import '../flutter_flow/flutter_flow_drop_down.dart';
@@ -6,7 +6,6 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../privacy_policy_page/privacy_policy_page_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -612,58 +611,22 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                         if (!formKey.currentState.validate()) {
                                           return;
                                         }
-                                        await showDialog(
-                                          context: context,
-                                          builder: (alertDialogContext) {
-                                            return AlertDialog(
-                                              title: Text('送信確認'),
-                                              content:
-                                                  Text('この内容で送信します。よろしいですか？'),
-                                              actions: [
-                                                TextButton(
-                                                  onPressed: () =>
-                                                      Navigator.pop(
-                                                          alertDialogContext),
-                                                  child: Text('戻る'),
-                                                ),
-                                                TextButton(
-                                                  onPressed: () async {
-                                                    Navigator.pop(
-                                                        alertDialogContext);
-
-                                                    final contactsCreateData =
-                                                        createContactsRecordData(
-                                                      name:
-                                                          textController1.text,
-                                                      email:
-                                                          textController2.text,
-                                                      occupation:
-                                                          textController3.text,
-                                                      phone:
-                                                          textController4.text,
-                                                      subject: dropDownValue,
-                                                      message:
-                                                          textController5.text,
-                                                      check:
-                                                          checkboxListTileValue,
-                                                      timestamp:
-                                                          getCurrentTimestamp,
-                                                      to: textController2.text,
-                                                      bccUids:
-                                                          'FpgxFQOx66in7KV4LNqz',
-                                                    );
-                                                    await ContactsRecord
-                                                        .collection
-                                                        .doc()
-                                                        .set(
-                                                            contactsCreateData);
-                                                    ;
-                                                  },
-                                                  child: Text('OK'),
-                                                ),
-                                              ],
-                                            );
-                                          },
+                                        await contactCall(
+                                          name: textController1.text,
+                                          email: textController2.text,
+                                          occupation: textController3.text,
+                                          phone: textController4.text,
+                                          subject: dropDownValue,
+                                          inquiryMessage: textController5.text,
+                                          check: checkboxListTileValue,
+                                        );
+                                        await Navigator.pushAndRemoveUntil(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                ContactPageWidget(),
+                                          ),
+                                          (r) => false,
                                         );
                                       } finally {
                                         setState(() => _loadingButton = false);
