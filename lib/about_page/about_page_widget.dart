@@ -105,7 +105,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: Text(
-                          'Particle Drawing合同会社（Particle Drawing G.K.）',
+                          'Particle Drawing合同会社（Particle Drawing, LLC）',
                           style: FlutterFlowTheme.bodyText1,
                         ),
                       ),
@@ -350,7 +350,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: Text(
-                          'info [ at ] particledrawing.com',
+                          'hello [ at ] particledrawing.com',
                           style: FlutterFlowTheme.bodyText1,
                         ),
                       )
