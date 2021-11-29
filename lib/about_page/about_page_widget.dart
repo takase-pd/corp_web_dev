@@ -345,7 +345,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: Text(
-                          'info [ at ] particledrawing.com',
+                          'hello [ at ] particledrawing.com',
                           style: FlutterFlowTheme.bodyText1,
                         ),
                       )

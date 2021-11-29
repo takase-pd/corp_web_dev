@@ -1,3 +1,4 @@
+import '../backend/api_requests/api_calls.dart';
 import '../backend/backend.dart';
 import '../components/footer_v2_widget.dart';
 import '../components/header_v2_widget.dart';
@@ -664,6 +665,15 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                               ],
                                             );
                                           },
+                                        );
+                                        await contactCall(
+                                          name: textController1.text,
+                                          email: textController2.text,
+                                          occupation: textController3.text,
+                                          phone: textController4.text,
+                                          subject: dropDownValue,
+                                          inquiryMessage: textController5.text,
+                                          check: checkboxListTileValue,
                                         );
                                       } finally {
                                         setState(() => _loadingButton = false);
