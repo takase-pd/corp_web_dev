@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProductsPageWidget extends StatefulWidget {
-  ProductsPageWidget({Key key}) : super(key: key);
+  const ProductsPageWidget({Key key}) : super(key: key);
 
   @override
   _ProductsPageWidgetState createState() => _ProductsPageWidgetState();
