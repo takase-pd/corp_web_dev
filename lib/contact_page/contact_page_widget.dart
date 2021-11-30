@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ContactPageWidget extends StatefulWidget {
-  ContactPageWidget({Key key}) : super(key: key);
+  const ContactPageWidget({Key key}) : super(key: key);
 
   @override
   _ContactPageWidgetState createState() => _ContactPageWidgetState();
@@ -111,7 +111,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Particle Drawingへの案件・プロジェクトのご相談や、採用、その他のお問い合わせは、以下のフォームからご連絡ください。担当者からご返信を差し上げます。',
+                                'Particle Drawingへの案件・プロジェクトのご相談や、採用、その他のお問い合わせは、以下のフォームからご連絡ください。担当者から返信を差し上げます。',
                                 style: FlutterFlowTheme.bodyText1,
                               ),
                               Padding(
@@ -452,6 +452,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   16, 0, 0, 0),
                                           child: FlutterFlowDropDown(
+                                            initialOption: dropDownValue ??=
+                                                '案件・プロジェクト：New Business',
                                             options: [
                                               '案件・プロジェクト：New Business',
                                               '採用・インターン：Careers',
