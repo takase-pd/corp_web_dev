@@ -7,6 +7,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../privacy_policy_page/privacy_policy_page_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ContactPageWidget extends StatefulWidget {
@@ -572,20 +573,49 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                               Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
-                                child: InkWell(
-                                  onTap: () async {
-                                    await Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            PrivacyPolicyPageWidget(),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      '※ご入力いただいた情報は',
+                                      style: FlutterFlowTheme.bodyText1,
+                                    ),
+                                    InkWell(
+                                      onTap: () async {
+                                        await Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                PrivacyPolicyPageWidget(),
+                                          ),
+                                        );
+                                      },
+                                      child: Text(
+                                        '個人情報保護方針',
+                                        style: FlutterFlowTheme.bodyText1,
                                       ),
-                                    );
-                                  },
-                                  child: Text(
-                                    '※入力いただいた情報は個人情報保護方針に則り管理いたします。',
-                                    style: FlutterFlowTheme.bodyText1,
-                                  ),
+                                    ),
+                                    InkWell(
+                                      onTap: () async {
+                                        await Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                PrivacyPolicyPageWidget(),
+                                          ),
+                                        );
+                                      },
+                                      child: FaIcon(
+                                        FontAwesomeIcons.externalLinkAlt,
+                                        color: Color(0xFF303030),
+                                        size: 14,
+                                      ),
+                                    ),
+                                    Text(
+                                      'に則り管理いたします。',
+                                      style: FlutterFlowTheme.bodyText1,
+                                    )
+                                  ],
                                 ),
                               ),
                               CheckboxListTile(
