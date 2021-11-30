@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PrivacyPolicyPageWidget extends StatefulWidget {
-  PrivacyPolicyPageWidget({Key key}) : super(key: key);
+  const PrivacyPolicyPageWidget({Key key}) : super(key: key);
 
   @override
   _PrivacyPolicyPageWidgetState createState() =>

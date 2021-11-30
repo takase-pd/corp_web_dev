@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HeaderV2Widget extends StatefulWidget {
-  HeaderV2Widget({Key key}) : super(key: key);
+  const HeaderV2Widget({Key key}) : super(key: key);
 
   @override
   _HeaderV2WidgetState createState() => _HeaderV2WidgetState();

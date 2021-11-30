@@ -49,7 +49,7 @@ packages:
       name: build
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.3"
+    version: "2.1.0"
   build_config:
     dependency: transitive
     description:
@@ -77,14 +77,14 @@ packages:
       name: build_runner
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.6"
+    version: "2.1.2"
   build_runner_core:
     dependency: transitive
     description:
       name: build_runner_core
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "7.0.1"
+    version: "7.1.0"
   built_collection:
     dependency: "direct main"
     description:
@@ -225,6 +225,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
+  equatable:
+    dependency: "direct main"
+    description:
+      name: equatable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.6"
   fake_async:
     dependency: transitive
     description:
@@ -304,7 +311,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_web_plugins:
-    dependency: "direct main"
+    dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.0"
@@ -314,7 +321,7 @@ packages:
       name: font_awesome_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "9.2.0"
+    version: "8.11.0"
   frontend_server_client:
     dependency: transitive
     description:
@@ -392,6 +399,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.1"
+  json_path:
+    dependency: "direct main"
+    description:
+      name: json_path
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.1"
   json_serializable:
     dependency: "direct main"
     description:
@@ -511,13 +525,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.2"
-  pointer_interceptor:
-    dependency: transitive
-    description:
-      name: pointer_interceptor
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.9.0+1"
   pool:
     dependency: transitive
     description:
@@ -747,20 +754,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
-  webview_flutter:
-    dependency: transitive
-    description:
-      name: webview_flutter
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.13"
-  webviewx:
-    dependency: "direct main"
-    description:
-      name: webviewx
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.0"
   win32:
     dependency: transitive
     description:

@@ -7,10 +7,11 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../privacy_policy_page/privacy_policy_page_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ContactPageWidget extends StatefulWidget {
-  ContactPageWidget({Key key}) : super(key: key);
+  const ContactPageWidget({Key key}) : super(key: key);
 
   @override
   _ContactPageWidgetState createState() => _ContactPageWidgetState();
@@ -111,7 +112,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Particle Drawingへの案件・プロジェクトのご相談や、採用、その他のお問い合わせは、以下のフォームからご連絡ください。担当者からご返信を差し上げます。',
+                                'Particle Drawingへの案件・プロジェクトのご相談や、採用、その他のお問い合わせは、以下のフォームからご連絡ください。担当者から返信を差し上げます。',
                                 style: FlutterFlowTheme.bodyText1,
                               ),
                               Padding(
@@ -452,6 +453,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   16, 0, 0, 0),
                                           child: FlutterFlowDropDown(
+                                            initialOption: dropDownValue ??=
+                                                '案件・プロジェクト：New Business',
                                             options: [
                                               '案件・プロジェクト：New Business',
                                               '採用・インターン：Careers',
@@ -570,20 +573,49 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                               Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
-                                child: InkWell(
-                                  onTap: () async {
-                                    await Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            PrivacyPolicyPageWidget(),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      '※ご入力いただいた情報は',
+                                      style: FlutterFlowTheme.bodyText1,
+                                    ),
+                                    InkWell(
+                                      onTap: () async {
+                                        await Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                PrivacyPolicyPageWidget(),
+                                          ),
+                                        );
+                                      },
+                                      child: Text(
+                                        '個人情報保護方針',
+                                        style: FlutterFlowTheme.bodyText1,
                                       ),
-                                    );
-                                  },
-                                  child: Text(
-                                    '※入力いただいた情報は個人情報保護方針に則り管理いたします。',
-                                    style: FlutterFlowTheme.bodyText1,
-                                  ),
+                                    ),
+                                    InkWell(
+                                      onTap: () async {
+                                        await Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                PrivacyPolicyPageWidget(),
+                                          ),
+                                        );
+                                      },
+                                      child: FaIcon(
+                                        FontAwesomeIcons.externalLinkAlt,
+                                        color: Color(0xFF303030),
+                                        size: 14,
+                                      ),
+                                    ),
+                                    Text(
+                                      'に則り管理いたします。',
+                                      style: FlutterFlowTheme.bodyText1,
+                                    )
+                                  ],
                                 ),
                               ),
                               CheckboxListTile(
