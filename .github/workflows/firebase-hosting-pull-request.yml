@@ -12,7 +12,7 @@ jobs:
 
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version:  '2.2.3'
+          flutter-version:  '2.8.0'
 
       - name: Download Flutter packages
         run: flutter pub get
@@ -25,4 +25,3 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CORP_WEB_DEV_3295D }}'
           projectId: corp-web-dev-3295d
           target: prod
-
