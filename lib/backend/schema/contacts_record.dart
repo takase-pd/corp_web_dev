@@ -63,6 +63,10 @@ abstract class ContactsRecord
       .snapshots()
       .map((s) => serializers.deserializeWith(serializer, serializedData(s)));
 
+  static Future<ContactsRecord> getDocumentOnce(DocumentReference ref) => ref
+      .get()
+      .then((s) => serializers.deserializeWith(serializer, serializedData(s)));
+
   ContactsRecord._();
   factory ContactsRecord([void Function(ContactsRecordBuilder) updates]) =
       _$ContactsRecord;

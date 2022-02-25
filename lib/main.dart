@@ -9,27 +9,58 @@ import 'package:pd_corp_web/products_page/products_page_widget.dart';
 import 'package:pd_corp_web/contact_page/contact_page_widget.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
+import 'flutter_flow/internationalization.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   setUrlStrategy(PathUrlStrategy());
   WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp();
+
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+
+  static _MyAppState of(BuildContext context) =>
+      context.findAncestorStateOfType<_MyAppState>();
+}
+
+class _MyAppState extends State<MyApp> {
+  Locale _locale;
+  ThemeMode _themeMode = ThemeMode.system;
+
+  void setLocale(Locale value) => setState(() => _locale = value);
+  void setThemeMode(ThemeMode mode) => setState(() {
+        _themeMode = mode;
+      });
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Particle Drawing | ビジネスデザイン',
-        theme: ThemeData(primarySwatch: Colors.blue),
-        routes: {
-          '/': (context) => HomePageWidget(),
-          '/about': (context) => AboutPageWidget(),
-          '/products': (context) => ProductsPageWidget(),
-          '/privacy': (context) => PrivacyPolicyPageWidget(),
-          '/contact': (context) => ContactPageWidget(),
-        });
+      title: 'Particle Drawing | ビジネスデザイン',
+      routes: {
+        '/': (context) => HomePageWidget(),
+        '/about': (context) => AboutPageWidget(),
+        '/products': (context) => ProductsPageWidget(),
+        '/privacy': (context) => PrivacyPolicyPageWidget(),
+        '/contact': (context) => ContactPageWidget(),
+      },
+      localizationsDelegates: [
+        FFLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      locale: _locale,
+      supportedLocales: const [Locale('en', '')],
+      theme: ThemeData(brightness: Brightness.light),
+      themeMode: _themeMode,
+      home: HomePageWidget(),
+    );
   }
 }

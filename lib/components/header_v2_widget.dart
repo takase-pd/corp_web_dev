@@ -42,14 +42,14 @@ class _HeaderV2WidgetState extends State<HeaderV2Widget> {
                     children: [
                       Text(
                         'Particle Drawing',
-                        style: FlutterFlowTheme.title3,
+                        style: FlutterFlowTheme.of(context).title3,
                       ),
                       Text(
                         'a design driven company',
-                        style: FlutterFlowTheme.bodyText1,
-                      )
+                        style: FlutterFlowTheme.of(context).bodyText1,
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -78,10 +78,10 @@ class _HeaderV2WidgetState extends State<HeaderV2Widget> {
                     },
                     child: Text(
                       'Home',
-                      style: FlutterFlowTheme.subtitle2.override(
-                        fontFamily: 'Open Sans',
-                        fontWeight: FontWeight.normal,
-                      ),
+                      style: FlutterFlowTheme.of(context).subtitle2.override(
+                            fontFamily: 'Open Sans',
+                            fontWeight: FontWeight.normal,
+                          ),
                     ),
                   ),
                 ),
@@ -98,7 +98,7 @@ class _HeaderV2WidgetState extends State<HeaderV2Widget> {
                     },
                     child: Text(
                       'About',
-                      style: FlutterFlowTheme.subtitle2,
+                      style: FlutterFlowTheme.of(context).subtitle2,
                     ),
                   ),
                 ),
@@ -115,13 +115,13 @@ class _HeaderV2WidgetState extends State<HeaderV2Widget> {
                     },
                     child: Text(
                       'Products',
-                      style: FlutterFlowTheme.subtitle2,
+                      style: FlutterFlowTheme.of(context).subtitle2,
                     ),
                   ),
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
