@@ -57,10 +57,11 @@ class _FooterV2WidgetState extends State<FooterV2Widget> {
                           },
                           child: Text(
                             'Home',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Open Sans',
-                              color: Colors.white,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Open Sans',
+                                      color: Colors.white,
+                                    ),
                           ),
                         ),
                       ),
@@ -77,11 +78,12 @@ class _FooterV2WidgetState extends State<FooterV2Widget> {
                           },
                           child: Text(
                             'About',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Open Sans',
-                              color: Colors.white,
-                              fontWeight: FontWeight.normal,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Open Sans',
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                           ),
                         ),
                       ),
@@ -98,13 +100,14 @@ class _FooterV2WidgetState extends State<FooterV2Widget> {
                           },
                           child: Text(
                             'Products',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Open Sans',
-                              color: Colors.white,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Open Sans',
+                                      color: Colors.white,
+                                    ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -127,10 +130,11 @@ class _FooterV2WidgetState extends State<FooterV2Widget> {
                           },
                           child: Text(
                             'Privacy Policy',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Open Sans',
-                              color: Colors.white,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Open Sans',
+                                      color: Colors.white,
+                                    ),
                           ),
                         ),
                       ),
@@ -147,26 +151,27 @@ class _FooterV2WidgetState extends State<FooterV2Widget> {
                           },
                           child: Text(
                             'Contact',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Open Sans',
-                              color: Colors.white,
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Open Sans',
+                                      color: Colors.white,
+                                    ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
             Text(
               'Copyright © 2021 Particle Drawing, LLC. All rights reserved.',
-              style: FlutterFlowTheme.subtitle2.override(
-                fontFamily: 'Open Sans',
-                color: Color(0xFFDCDCDC),
-                fontSize: 10,
-              ),
-            )
+              style: FlutterFlowTheme.of(context).subtitle2.override(
+                    fontFamily: 'Open Sans',
+                    color: Color(0xFFDCDCDC),
+                    fontSize: 10,
+                  ),
+            ),
           ],
         ),
       ),

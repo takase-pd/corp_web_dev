@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>700776545003-88dc6nosiagj9v5afv55go5mhl1m08sk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.700776545003-88dc6nosiagj9v5afv55go5mhl1m08sk</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>700776545003-0ig0r7ucr3qaq0en0tqt4f81aqcbn0v7.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBYgfiwte2PkOV45k7TslzzE_10bklQcqA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>700776545003</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.particledrawing.pdcorpweb</string>
+	<key>PROJECT_ID</key>
+	<string>corp-web-dev-3295d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>corp-web-dev-3295d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:700776545003:ios:7b9453b7195bbdd2469cae</string>
+</dict>
+</plist>

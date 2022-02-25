@@ -25,7 +25,6 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
   TextEditingController textController4;
   TextEditingController textController5;
   bool checkboxListTileValue;
-  bool _loadingButton = false;
   final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -41,11 +40,12 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: formKey,
-      child: Scaffold(
-        key: scaffoldKey,
-        body: Container(
+    return Scaffold(
+      key: scaffoldKey,
+      body: Form(
+        key: formKey,
+        autovalidateMode: AutovalidateMode.disabled,
+        child: Container(
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(),
@@ -71,10 +71,10 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                         child: Text(
                           'Contact',
                           textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.title1.override(
-                            fontFamily: 'Open Sans',
-                            fontSize: 36,
-                          ),
+                          style: FlutterFlowTheme.of(context).title1.override(
+                                fontFamily: 'Open Sans',
+                                fontSize: 36,
+                              ),
                         ),
                       ),
                       Stack(
@@ -85,9 +85,9 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                             width: double.infinity,
                             height: 500,
                             fit: BoxFit.cover,
-                          )
+                          ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -113,7 +113,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                             children: [
                               Text(
                                 'Particle Drawingへの案件・プロジェクトのご相談や、採用、その他のお問い合わせは、以下のフォームからご連絡ください。担当者から返信を差し上げます。',
-                                style: FlutterFlowTheme.bodyText1,
+                                style: FlutterFlowTheme.of(context).bodyText1,
                               ),
                               Padding(
                                 padding:
@@ -142,13 +142,6 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                             obscureText: false,
                                             decoration: InputDecoration(
                                               labelText: 'お名前：Name',
-                                              labelStyle: FlutterFlowTheme
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Color(0xFF8B97A2),
-                                                fontWeight: FontWeight.w500,
-                                              ),
                                               enabledBorder:
                                                   UnderlineInputBorder(
                                                 borderSide: BorderSide(
@@ -176,12 +169,13 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                                 ),
                                               ),
                                             ),
-                                            style: FlutterFlowTheme.bodyText2
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText2
                                                 .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
+                                                  fontFamily: 'Montserrat',
+                                                  color: Color(0xFF8B97A2),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
                                             validator: (val) {
                                               if (val.isEmpty) {
                                                 return 'お名前をご記入ください。';
@@ -194,7 +188,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                           ),
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -225,13 +219,6 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                             obscureText: false,
                                             decoration: InputDecoration(
                                               labelText: 'メール：Email',
-                                              labelStyle: FlutterFlowTheme
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Color(0xFF8B97A2),
-                                                fontWeight: FontWeight.w500,
-                                              ),
                                               enabledBorder:
                                                   UnderlineInputBorder(
                                                 borderSide: BorderSide(
@@ -259,12 +246,13 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                                 ),
                                               ),
                                             ),
-                                            style: FlutterFlowTheme.bodyText2
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText2
                                                 .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
+                                                  fontFamily: 'Montserrat',
+                                                  color: Color(0xFF8B97A2),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
                                             keyboardType:
                                                 TextInputType.emailAddress,
                                             validator: (val) {
@@ -277,7 +265,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                           ),
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -308,13 +296,6 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                             obscureText: false,
                                             decoration: InputDecoration(
                                               labelText: '所属：Organization',
-                                              labelStyle: FlutterFlowTheme
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Color(0xFF8B97A2),
-                                                fontWeight: FontWeight.w500,
-                                              ),
                                               enabledBorder:
                                                   UnderlineInputBorder(
                                                 borderSide: BorderSide(
@@ -342,16 +323,17 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                                 ),
                                               ),
                                             ),
-                                            style: FlutterFlowTheme.bodyText2
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText2
                                                 .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
+                                                  fontFamily: 'Montserrat',
+                                                  color: Color(0xFF8B97A2),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
                                           ),
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -382,13 +364,6 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                             obscureText: false,
                                             decoration: InputDecoration(
                                               labelText: '電話番号：Phone',
-                                              labelStyle: FlutterFlowTheme
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Color(0xFF8B97A2),
-                                                fontWeight: FontWeight.w500,
-                                              ),
                                               enabledBorder:
                                                   UnderlineInputBorder(
                                                 borderSide: BorderSide(
@@ -416,17 +391,18 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                                 ),
                                               ),
                                             ),
-                                            style: FlutterFlowTheme.bodyText2
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText2
                                                 .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
+                                                  fontFamily: 'Montserrat',
+                                                  color: Color(0xFF8B97A2),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
                                             keyboardType: TextInputType.phone,
                                           ),
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -464,13 +440,15 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                                 () => dropDownValue = val),
                                             width: 130,
                                             height: 40,
-                                            textStyle: FlutterFlowTheme
-                                                .bodyText2
-                                                .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText2
+                                                    .override(
+                                                      fontFamily: 'Montserrat',
+                                                      color: Color(0xFF8B97A2),
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
                                             fillColor: Colors.white,
                                             elevation: 2,
                                             borderColor: Colors.transparent,
@@ -482,7 +460,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                           ),
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -513,13 +491,6 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                             obscureText: false,
                                             decoration: InputDecoration(
                                               labelText: 'お問い合わせ内容：Message',
-                                              labelStyle: FlutterFlowTheme
-                                                  .bodyText2
-                                                  .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Color(0xFF8B97A2),
-                                                fontWeight: FontWeight.w500,
-                                              ),
                                               enabledBorder:
                                                   UnderlineInputBorder(
                                                 borderSide: BorderSide(
@@ -547,12 +518,13 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                                 ),
                                               ),
                                             ),
-                                            style: FlutterFlowTheme.bodyText2
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText2
                                                 .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Color(0xFF8B97A2),
-                                              fontWeight: FontWeight.w500,
-                                            ),
+                                                  fontFamily: 'Montserrat',
+                                                  color: Color(0xFF8B97A2),
+                                                  fontWeight: FontWeight.w500,
+                                                ),
                                             maxLines: 10,
                                             keyboardType:
                                                 TextInputType.multiline,
@@ -566,7 +538,7 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                           ),
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -578,7 +550,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                   children: [
                                     Text(
                                       '※ご入力いただいた情報は',
-                                      style: FlutterFlowTheme.bodyText1,
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1,
                                     ),
                                     InkWell(
                                       onTap: () async {
@@ -592,7 +565,8 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                       },
                                       child: Text(
                                         '個人情報保護方針',
-                                        style: FlutterFlowTheme.bodyText1,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1,
                                       ),
                                     ),
                                     InkWell(
@@ -613,23 +587,30 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                     ),
                                     Text(
                                       'に則り管理いたします。',
-                                      style: FlutterFlowTheme.bodyText1,
-                                    )
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1,
+                                    ),
                                   ],
                                 ),
                               ),
-                              CheckboxListTile(
-                                value: checkboxListTileValue ??= false,
-                                onChanged: (newValue) => setState(
-                                    () => checkboxListTileValue = newValue),
-                                title: Text(
-                                  '上記内容に同意',
-                                  textAlign: TextAlign.start,
-                                  style: FlutterFlowTheme.bodyText2,
+                              Theme(
+                                data: ThemeData(
+                                  unselectedWidgetColor: Color(0xFF707070),
                                 ),
-                                dense: false,
-                                controlAffinity:
-                                    ListTileControlAffinity.trailing,
+                                child: CheckboxListTile(
+                                  value: checkboxListTileValue ??= false,
+                                  onChanged: (newValue) => setState(
+                                      () => checkboxListTileValue = newValue),
+                                  title: Text(
+                                    '上記内容に同意',
+                                    textAlign: TextAlign.start,
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyText2,
+                                  ),
+                                  dense: false,
+                                  controlAffinity:
+                                      ListTileControlAffinity.trailing,
+                                ),
                               ),
                               Align(
                                 alignment: AlignmentDirectional(0.95, 0),
@@ -638,44 +619,37 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                       0, 16, 0, 0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      setState(() => _loadingButton = true);
-                                      try {
-                                        if (!formKey.currentState.validate()) {
-                                          return;
-                                        }
-                                        await contactCall(
-                                          name: textController1.text,
-                                          email: textController2.text,
-                                          occupation: textController3.text,
-                                          phone: textController4.text,
-                                          subject: dropDownValue,
-                                          inquiryMessage: textController5.text,
-                                          check: checkboxListTileValue,
-                                        );
-                                        await Navigator.pushAndRemoveUntil(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                ContactPageWidget(),
-                                          ),
-                                          (r) => false,
-                                        );
-                                      } finally {
-                                        setState(() => _loadingButton = false);
-                                      }
+                                      await ContactCall.call(
+                                        name: textController1.text,
+                                        email: textController2.text,
+                                        occupation: textController3.text,
+                                        phone: textController4.text,
+                                        subject: dropDownValue,
+                                        inquiryMessage: textController5.text,
+                                        check: checkboxListTileValue,
+                                      );
+                                      await Navigator.pushAndRemoveUntil(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              ContactPageWidget(),
+                                        ),
+                                        (r) => false,
+                                      );
                                     },
                                     text: '送信：Send',
                                     options: FFButtonOptions(
                                       width: 140,
                                       height: 60,
                                       color: Color(0xFF8B97A2),
-                                      textStyle:
-                                          FlutterFlowTheme.subtitle2.override(
-                                        fontFamily: 'Montserrat',
-                                        color: Colors.white,
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                      ),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .subtitle2
+                                          .override(
+                                            fontFamily: 'Montserrat',
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500,
+                                          ),
                                       elevation: 2,
                                       borderSide: BorderSide(
                                         color: Colors.transparent,
@@ -683,18 +657,17 @@ class _ContactPageWidgetState extends State<ContactPageWidget> {
                                       ),
                                       borderRadius: 8,
                                     ),
-                                    loading: _loadingButton,
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
                 ),
-                FooterV2Widget()
+                FooterV2Widget(),
               ],
             ),
           ),

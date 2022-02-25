@@ -58,10 +58,10 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
                       child: Text(
                         'Products',
                         textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.title1.override(
-                          fontFamily: 'Open Sans',
-                          fontSize: 36,
-                        ),
+                        style: FlutterFlowTheme.of(context).title1.override(
+                              fontFamily: 'Open Sans',
+                              fontSize: 36,
+                            ),
                       ),
                     ),
                     Stack(
@@ -72,9 +72,9 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
                           width: double.infinity,
                           height: 500,
                           fit: BoxFit.cover,
-                        )
+                        ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -94,14 +94,14 @@ class _ProductsPageWidgetState extends State<ProductsPageWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: Text(
                           'Under construction.',
-                          style: FlutterFlowTheme.bodyText1,
+                          style: FlutterFlowTheme.of(context).bodyText1,
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
               ),
-              FooterV2Widget()
+              FooterV2Widget(),
             ],
           ),
         ),
